@@ -11,5 +11,5 @@ app.listen(5000, (err)=>{
 })
 
 app.get("/", (req, res)=>{
-    res.status(200).send("Realestate Backend server")
+    res.status(200).send("Realestate Backend server zw")
 })
