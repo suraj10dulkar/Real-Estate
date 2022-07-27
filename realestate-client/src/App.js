@@ -4,7 +4,7 @@ function App() {
   return (
     <>
     <h1>
-      Real Estate Project
+      Real Estate Project 10x
     </h1>
     </>
   );
