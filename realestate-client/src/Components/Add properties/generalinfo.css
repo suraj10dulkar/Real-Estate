@@ -1,0 +1,109 @@
+.generalinfo{
+    background-color: rgb(235, 228, 228);
+    width: 76%;
+    margin-left: 20%;
+    border-radius: 10px;
+    height: 550px;
+}
+
+
+.box9{
+    display: flex;
+    margin-left: 3%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.select9{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.mobile{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.name{
+    margin-left: 2%;
+    font-weight: bold;
+}
+
+.mob{
+    margin-left: 5%;
+}
+
+.box10{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.select10{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.select11{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.saletype{
+    margin-left: 5%;
+}
+
+.box11{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.select12{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.select13{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.prev2{
+    border-radius: 4em / 3em;
+    padding: 20px;
+    width: 16%;
+    height: 60px;
+    background-color: rgb(69, 178, 233);
+    margin-left: 30%;
+    margin-top: 4%;
+    font-weight: bolder;
+    color: white;
+    font-size: large;
+}

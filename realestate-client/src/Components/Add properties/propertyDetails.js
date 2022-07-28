@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./propertDetails.css"
+import "./propertydetails.css"
 
 function PropertyDetails(){
     return(
@@ -12,7 +12,8 @@ function PropertyDetails(){
             <div className="general"><span className="oa">3</span><span><Link to="/generalinfo" className="general1">    General Info</Link></span></div>
             <div className="loc"><span className="oa">4</span><span><Link to="/locationinfo" className="loc1">    Location Info</Link></span></div>
         </div>
-        <form>
+        <form className="propertyform">
+            <div className="box19">
             <div className="len">
                 <label for="length">Length</label>
                 <div>
@@ -26,29 +27,33 @@ function PropertyDetails(){
                     <input className="bre" placeholder="Example :1000"></input>
                 </div>
             </div>
+            </div>
 
+            <div className="box20">
             <div className="Total-area">
                 <label for="area">Total Area</label>
                 <div>
-                    <input className="area" placeholder="Example :7500"></input>
+                    <input className="area1" placeholder="Example :7500"></input>
                 </div>
             </div>
 
             <div className="area-unit">
             <lable for="unit" id="unit">Area Unit</lable>
             <div>
-            <select name="unit">
+            <select name="unit" className="select17">
                 <option value="meter">Meter Square</option>
                 <option value="yard">Yard Square</option>
                 <option value="cm">CM Square</option>
             </select>
             </div>
             </div>
-
+            </div>
+            
+            <div className="box21">
             <div className="noofBHK">
             <lable for="bhk" id="bhk">No of BHK</lable>
             <div>
-            <select name="bhk">
+            <select name="bhk" className="select18">
                 <option value="1-bhk">1 BHK</option>
                 <option value="2-bhk">2 BHK</option>
                 <option value="3-bhk">3 BHK</option>
@@ -59,7 +64,7 @@ function PropertyDetails(){
             <div className="nooffloor">
             <lable for="floor" id="floor">No of Floors</lable>
             <div>
-            <select name="floor">
+            <select name="floor" className="select19">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -69,6 +74,12 @@ function PropertyDetails(){
             </select>
             </div>
             </div>
+
+            </div>
+
+            
+
+            
 
             <div className="attached">
             <lable for="attach" id="attach">Attached</lable>

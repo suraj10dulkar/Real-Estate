@@ -1,3 +1,9 @@
+h2{
+    margin-top: 6%;
+    margin-left: 20%;
+}
+
+
 .navbar{
     border-radius: 4em / 3em;
     padding: 20px;
@@ -6,11 +12,13 @@
     background-color: white;
     display: flex;
     justify-content: space-around;
+    margin-left: 20%;
+    margin-top: 2%;
+
 }
 
 .basic{
     font-weight: bolder;
-    border: 1px solid black;    
 }
 .basic1{
     text-decoration: none;
@@ -49,3 +57,175 @@
     height: 100%;
 } */
 
+.box1{
+    display: flex;
+    margin-left: 3%;
+    margin-top: 4%;
+}
+
+.proType{
+    font-weight: bold;
+}
+
+.select{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.negotableSelect{
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.select1{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.box2{
+    display: flex;
+    margin-left: 3%;
+    margin-top: 3%;
+
+}
+
+.select3{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.select4{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.ownershipSelect{
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.priceSelect{
+    font-weight: bold;
+}
+
+.box3{
+    display: flex;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.select5{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+
+}
+
+.select6{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.propertyageSelect{
+    font-weight: bold;
+}
+
+.propertyapprovedSelect{
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.box4{
+    display: flex;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.select7{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.select8{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.desciprtion{
+    font-weight: bold;
+}
+
+.BankLoanSelect{
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.cancel{
+    border-radius: 4em / 3em;
+    padding: 20px;
+    width: 16%;
+    height: 60px;
+    background-color: rgb(69, 178, 233);
+    margin-left: 30%;
+    margin-top: 4%;
+    font-weight: bolder;
+    color: white;
+    font-size: large;
+}
+
+.save2{
+    border-radius: 4em / 3em;
+    padding: 20px;
+    width: 20%;
+    height: 60px;
+    background-color: white;
+    background-color: rgb(23, 95, 239);
+    margin-left: 5%;
+    margin-top: 4%;
+    font-weight: bolder;
+    color: white;
+    font-size: large;
+}
+
+.basicform{
+    background-color: rgb(235, 228, 228);
+    width: 76%;
+    margin-left: 20%;
+    border-radius: 10px;
+    height: 550px;
+}
+
+.ppd-Package{
+    margin-left: 5%;
+}

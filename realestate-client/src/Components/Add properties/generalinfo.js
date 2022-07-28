@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./generalinfo.css"
 
 function GeneralInfo(){
     return(
@@ -12,10 +13,13 @@ function GeneralInfo(){
             <div className="loc"><span className="oa">4</span><span><Link to="/locationinfo" className="loc1">    Location Info</Link></span></div>
         </div>
 
+        <form className="generalinfo">
+
+            <div className="box9">
             <div className="name">
             <lable for="name" id="name">Ownership</lable>
             <div>
-            <select name="name">
+            <select name="name" className="select9">
                 <option value="Owner">Owner</option>
                 <option value="Self">Sellf</option>
                 <option value="Family Member">Family Member</option>
@@ -23,17 +27,19 @@ function GeneralInfo(){
             </div>
             </div>
 
-            <div className="mobile">
+            <div className="mob">
                 <label for="mobile">Mobile</label>
                 <div>
                     <input className="mobile" placeholder="Enter Mobile Number"></input>
                 </div>
             </div>
+            </div>
 
+            <div className="box10">
             <div className="postedby">
             <lable for="post" id="post">Posted By</lable>
             <div>
-            <select name="post">
+            <select name="post" className="select10">
                 <option value="postedby">Posted By</option>
                 <option value="Self">Sellf</option>
                 <option value="Family Member">Family Member</option>
@@ -44,18 +50,20 @@ function GeneralInfo(){
             <div className="saletype">
             <lable for="sale" id="sale">Sale Type</lable>
             <div>
-            <select name="sale">
+            <select name="sale" className="select11">
                 <option value="Please Select">Please Select</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
             </div>
             </div>
+            </div>
 
+            <div className="box11">
             <div className="Featured Package">
             <lable for="pack" id="pack">Featured Packages</lable>
             <div>
-            <select name="pack">
+            <select name="pack" className="select12">
                 <option value="Please Select">Please Select</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -66,16 +74,17 @@ function GeneralInfo(){
             <div className="ppd-Package">
             <lable for="ppd" id="ppd">PPD Packages</lable>
             <div>
-            <select name="ppd">
+            <select name="ppd" className="select13">
                 <option value="Please Select">Please Select</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
             </div>
             </div>
-
+            </div>
+            
             <div className="image">
-                <label for="image">Mobile</label>
+                <label for="image"></label>
                 <div>
                     <input className="image" type="file"></input>
                 </div>
@@ -84,8 +93,11 @@ function GeneralInfo(){
             <Link to="/propertydeatils"><button className="prev2">Previous</button></Link>
             <Link to="/locationinfo"><button className="save2">Save & Continue</button></Link>
 
+        </form>
 
-            </div>
+            
+
+        </div>
 
 
     )

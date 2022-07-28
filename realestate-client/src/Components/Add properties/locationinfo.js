@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./locationinfo.css"
 
 function LocationInfo(){
     return(
@@ -12,24 +13,29 @@ function LocationInfo(){
             <div className="loc"><span className="oa">4</span><span><Link to="/locationinfo" className="loc1">    Location Info</Link></span></div>
         </div>
 
-        <div className="email">
+        <form className="locationform">
+
+
+            <div className="box12">
+            <div className="email">
                 <label for="email">Email</label>
                 <div>
                     <input className="email" placeholder="Email"></input>
                 </div>
-        </div>
-
-        <div className="address">
+            </div>
+            <div className="address">
                 <label for="add">Address</label>
                 <div>
                     <input className="add" placeholder="Address"></input>
                 </div>
-        </div>
-
+            </div>
+            </div>
+        
+        <div className="box13">
         <div className="city">
             <lable for="city" id="city">City</lable>
             <div>
-            <select name="city">
+            <select name="city" className="select14">
                 <option value="Bangalore">Bangalore</option>
                 <option value="mumbai">Mumbai</option>
                 <option value="delhi">Delhi</option>
@@ -42,48 +48,57 @@ function LocationInfo(){
             <div className="area">
             <lable for="area" id="area">Area</lable>
             <div>
-            <select name="area">
+            <select name="area" className="select15">
                 <option value="pune">Pune</option>
                 <option value="jodhpur">Jodhpur</option>
                 <option value="goa">Goa</option>
             </select>
             </div>
             </div>
+        </div>
 
-            <div className="pincode">
+
+        <div className="box14">
+        <div className="pincode">
             <lable for="pincode" id="pincode">Pincode</lable>
             <div>
-            <select name="pincode">
+            <select name="pincode" className="select16">
                 <option value="512468">512468</option>
                 <option value="987456">987456</option>
                 <option value="123456">123456</option>
             </select>
             </div>
             </div>
-
-        <div className="landmark">
+            <div className="landmark">
                 <label for="land">Landmark</label>
                 <div>
                     <input className="land" placeholder="Landmark"></input>
                 </div>
         </div>
+        </div>
 
-        <div className="latitude">
+        <div className="box15">
+        <div className="lat">
                 <label for="latitude">Latitude</label>
                 <div>
                     <input className="latitude" placeholder="Latitude"></input>
                 </div>
         </div>
 
-        <div className="longitude">
+        <div className="long">
                 <label for="longitude">Longitude</label>
                 <div>
                     <input className="longitude" placeholder="Longitude"></input>
                 </div>
         </div>
-
+        </div>
         <Link to="/generalinfo"><button className="prev3">Previous</button></Link>
         <button className="save2">ADD PROPERTY</button>
+        </form>
+
+        
+
+        
 
         </div>
     )

@@ -1,0 +1,138 @@
+.locationform{
+    background-color: rgb(235, 228, 228);
+    width: 76%;
+    margin-left: 20%;
+    border-radius: 10px;
+    height: 550px;
+}
+
+
+.box12{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.email{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.add{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.address{
+    margin-left: 8%;
+    margin-top: 0.5%;
+}
+
+.box13{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.select14{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.select15{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.area{
+    margin-left: 5%;
+}
+
+.box14{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.select16{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.land{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.landmark{
+    margin-left: 5%;
+}
+
+.box15{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.latitude{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.longitude{
+    width: 470px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.long{
+    margin-left: 5%;
+}
+
+.prev3{
+    border-radius: 4em / 3em;
+    padding: 20px;
+    width: 16%;
+    height: 60px;
+    background-color: rgb(69, 178, 233);
+    margin-left: 30%;
+    margin-top: 4%;
+    font-weight: bolder;
+    color: white;
+    font-size: large;
+}
