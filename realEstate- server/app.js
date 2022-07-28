@@ -23,4 +23,4 @@ app.get("/", (req, res)=>{
     res.status(200).send("Realestate Backend server zw")
 })
 
-app.use("/user", userController);
+app.use("/userRoute", userController);
