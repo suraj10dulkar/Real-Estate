@@ -1,0 +1,157 @@
+body{
+    height: 100%;
+    width: 100%;
+    
+}
+.prime{
+    height: auto;
+    width: auto;
+    /* background-color: rgb(57, 111, 157); */
+}
+
+.main_section{
+    height:740px;
+    width: 76%;
+    border: 1px solid black;
+    margin-top: -37%;
+    margin-left: 330px;
+}
+.main_section .heading_section{
+        color: grey;
+}
+.main_section .nav_section .navbar{
+    margin-left: 60px;
+    background-color: rgb(250, 251, 251);
+    width:80%;
+    margin-top: 10px;
+    height: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.main_section .nav_section .navbar .nav_two{
+    background-color: rgb(86, 191, 247);
+    height: 60px;
+    width: 200px;
+    margin-top: -20px;
+    border-radius: 60px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+
+}
+.main_section .nav_section .navbar .nav_two .property{
+    text-align: center;
+    margin-top: 17px;
+    color: white;
+}
+.oa{
+    background-color: white;
+    color: black;
+}
+.form_section{
+    margin-left: 10px;
+    border: 1px solid red;
+    margin-top: 30px;
+    height: 500px;
+}
+.form_row{
+    display: flex;
+    flex-direction: column;
+    
+}
+.form_row_one{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+   
+}
+.form_row_one .breath{
+    margin-left: 80px;
+}
+.form_row_two{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.form_row_two .area-unit{
+    margin-left: 80px;
+}
+.areaunit{
+    width: 335px;
+    height: 40px;
+
+}
+.form_row_three{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.bhk{
+    width: 335px;
+    height: 40px;
+}
+.form_row_three .nooffloor{
+    margin-left: 80px;
+
+}
+.floor{
+    width: 335px;
+    height: 40px;
+}
+.form_row_four{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.attach{
+    width: 335px;
+    height: 40px;
+}
+.western{
+    margin-left: 80px;
+}
+.toilet{
+    width: 335px;
+    height: 40px;
+}
+.form_row_five{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.furnish{
+    width: 335px;
+    height: 40px;
+}
+.carparking{
+    margin-left: 80px;
+}
+.car{
+    width: 335px;
+    height: 40px;
+}
+.form_row_six{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.lift{
+    width: 335px;
+    height: 40px;
+}
+.electricity{
+    margin-left: 80px;
+}
+.form_row_seven{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.facing{
+    width: 335px;
+    height: 40px;
+}

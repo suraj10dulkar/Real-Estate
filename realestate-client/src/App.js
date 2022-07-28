@@ -1,16 +1,17 @@
 import React from "react";
 import {Routes,Route} from "react-router-dom";
-import Login from "./Components/Signup-Login/Login";
-import Signup from "./Components/Signup-Login/Signup";
-import BasicInfo from "./Components/Signup-Login/BasicInfo";
-import PropertyDetails from "./Components/Signup-Login/propertyDetails";
-import GeneralInfo from "./Components/Signup-Login/generalinfo";
-import LocationInfo from "./Components/Signup-Login/locationinfo";
+import Login from "./Components/signin-signup/Login";
+import Signup from "./Components/signin-signup/Signup";
+import BasicInfo from "./Components/Add properties/BasicInfo";
+import PropertyDetails from "./Components/Add properties/propertyDetails";
+import GeneralInfo from "./Components/Add properties/generalinfo";
+import LocationInfo from "./Components/Add properties/locationinfo";
 
 function App() {
   return (
     <>
     {/* <h1>Realestate project</h1> */}
+
     <Routes>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/signup" element={<Signup></Signup>}></Route>
