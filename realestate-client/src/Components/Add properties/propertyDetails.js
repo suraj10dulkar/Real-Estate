@@ -215,23 +215,6 @@ function PropertyDetails(){
                     <Link to="/basicinfo"><button type="button" className="cancel">Previous</button></Link>
                     <Link to="/generalinfo"><button type="button" className="save2">Save & Continue</button></Link>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-       
-    
         
         </div>
         </div>
