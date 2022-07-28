@@ -11,7 +11,7 @@ import LocationInfo from "./Components/Add properties/locationinfo";
 function App() {
   return (
     <>
-    {/* <h1>Realestate project</h1> */}
+
     <Routes>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/signup" element={<Signup></Signup>}></Route>
