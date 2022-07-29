@@ -52,4 +52,10 @@ router.post("/signup", (req, res)=>{
     
 })
 
+router.get("/signupuser", (req, res)=> {
+    signupModal.find().then((propertyData)=> {
+        res.status(200).send({property: propertyData});
+    });
+});
+
 module.exports = router;

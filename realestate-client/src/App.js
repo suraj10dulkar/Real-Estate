@@ -6,6 +6,7 @@ import BasicInfo from "./Components/Add properties/BasicInfo";
 import PropertyDetails from "./Components/Add properties/propertyDetails"
 import GeneralInfo from "./Components/Add properties/generalinfo";
 import LocationInfo from "./Components/Add properties/locationinfo";
+import Property from "./Components/property/Property";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/signup" element={<Signup></Signup>}></Route>
+      <Route path="/property" element={<Property></Property>}></Route>
       <Route path="/basicinfo" element={<BasicInfo></BasicInfo>}></Route>
       <Route path="/propertydeatils" element={<PropertyDetails></PropertyDetails>}></Route>
       <Route path="/generalinfo" element={<GeneralInfo></GeneralInfo>}></Route>
