@@ -1,8 +1,19 @@
 const express = require("express")
+const mongoose = require("mongoose")
 const app = express();
 const userController = require("./routes/userRoute");
-
+const signupLoginController = require("./routes/signupLoginRoute")
 const port = process.env.PORT || 5000 ;
+const cors = require("cors")
+require('dotenv').config()
+
+const DB = process.env.MONGO_DB
+
+mongoose.connect(DB, ()=>{
+    console.log("Successfully connected to database!")
+}, (err)=>{
+    console.log(err)
+})
 
 
 app.use(express.json({limit: "30mb", extended:true}));
@@ -24,3 +35,4 @@ app.get("/", (req, res)=>{
 })
 
 app.use("/user", userController);
+app.use(signupLoginController);
