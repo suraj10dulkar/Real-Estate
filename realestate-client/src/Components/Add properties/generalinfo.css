@@ -1,9 +1,9 @@
 .generalinfo{
-    background-color: rgb(235, 228, 228);
-    width: 76%;
-    margin-left: 20%;
+    width: 90%;
+    margin-left: 6%;
     border-radius: 10px;
     height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 
@@ -15,7 +15,7 @@
 }
 
 .select9{
-    width: 500px;
+    width: 450px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
@@ -24,7 +24,7 @@
 }
 
 .mobile{
-    width: 470px;
+    width: 420px;
     height: 26px;
     border-radius: 10px;
     font-weight: bold;
@@ -49,7 +49,7 @@
 }
 
 .select10{
-    width: 500px;
+    width: 450px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
@@ -58,7 +58,7 @@
 }
 
 .select11{
-    width: 500px;
+    width: 450px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
@@ -78,7 +78,7 @@
 }
 
 .select12{
-    width: 500px;
+    width: 450px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
@@ -87,7 +87,7 @@
 }
 
 .select13{
-    width: 500px;
+    width: 450px;
     height: 50px;
     border-radius: 10px;
     font-weight: bold;
@@ -106,4 +106,22 @@
     font-weight: bolder;
     color: white;
     font-size: large;
+    border: 0px;
+}
+
+.main_section .nav_section .navbar .nav_three{
+    background-color: rgb(86, 191, 247);
+    height: 60px;
+    width: 200px;
+    margin-top: -20px;
+    border-radius: 60px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    text-align: center;
+    color: white;
+}
+
+.main_section .nav_section .navbar .nav_three .general{
+    text-align: center;
+    margin-top: 17px;
+    color: white;
 }

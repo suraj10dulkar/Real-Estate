@@ -1,17 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./generalinfo.css"
+import Header from "../header_sidebar/Header";
 
 function GeneralInfo(){
     return(
-        <div className="main">
+        <>
+        <hr></hr>
+        <Header/>
+        <div className="main_section">
+
+<div className="heading_section">
         <h2>ADD NEW PROPERTY</h2>
-        <div className="navbar">
-            <div className="basic"><span className="oa">1</span><span><Link to="/basicinfo" className="basic1">    Basic Info</Link></span></div>
-            <div className="property"><span className="oa">2</span><span><Link to="/propertydeatils" className="property1">    Property Details</Link></span></div>
-            <div className="general"><span className="oa">3</span><span><Link to="/generalinfo" className="general1">    General Info</Link></span></div>
-            <div className="loc"><span className="oa">4</span><span><Link to="/locationinfo" className="loc1">    Location Info</Link></span></div>
-        </div>
+</div>
+
+
+<div className="nav_section">
+<div className="navbar">
+    <div className="nav_1">
+    <div className="basic"><span className="oa">1</span><span>    Basic Info</span></div>
+
+    </div>
+    <div className="nav_2">
+    <div className="property"><span className="oa">2</span><span>    Property Details</span></div>
+
+    </div>
+    <div className="nav_three">
+    <div className="general"><span className="oa">3</span><span>    General Info</span></div>
+
+    </div>
+    <div className="nav_fou">
+    <div className="loc"><span className="oa">4</span><span>Location Info</span></div>
+
+    </div>
+</div>
+
+</div>
+        
 
         <form className="generalinfo">
 
@@ -95,10 +120,10 @@ function GeneralInfo(){
 
         </form>
 
-            
+            </div>
 
-        </div>
-
+        
+        </>
 
     )
 }

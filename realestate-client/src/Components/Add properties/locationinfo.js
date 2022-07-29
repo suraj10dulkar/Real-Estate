@@ -1,17 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./locationinfo.css"
+import Header from "../header_sidebar/Header";
 
 function LocationInfo(){
     return(
-        <div className="main">
-        <h2>ADD NEW PROPERTY</h2>
-        <div className="navbar">
-            <div className="basic"><span className="oa">1</span><span><Link to="/basicinfo" className="basic1">    Basic Info</Link></span></div>
-            <div className="property"><span className="oa">2</span><span><Link to="/propertydeatils" className="property1">    Property Details</Link></span></div>
-            <div className="general"><span className="oa">3</span><span><Link to="/generalinfo" className="general1">    General Info</Link></span></div>
-            <div className="loc"><span className="oa">4</span><span><Link to="/locationinfo" className="loc1">    Location Info</Link></span></div>
-        </div>
+        <>
+        <hr></hr>
+        <Header/>
+        <div className="main_section">
+
+            <div className="heading_section">
+                    <h2>ADD NEW PROPERTY</h2>
+            </div>
+
+
+            <div className="nav_section">
+            <div className="navbar">
+                <div className="nav_first">
+                <div className="basic"><span className="oa">1</span><span>    Basic Info</span></div>
+
+                </div>
+                <div className="nav_second">
+                <div className="property"><span className="oa">2</span><span>    Property Details</span></div>
+
+                </div>
+                <div className="nav_third">
+                <div className="general"><span className="oa">3</span><span>General Info</span></div>
+
+                </div>
+                <div className="nav_four">
+                <div className="loc"><span className="oa">4</span><span>   Location Info</span></div>
+
+                </div>
+            </div>
+
+            </div>
 
         <form className="locationform">
 
@@ -101,6 +125,7 @@ function LocationInfo(){
         
 
         </div>
+        </>
     )
 }
 

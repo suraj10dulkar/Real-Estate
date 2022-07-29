@@ -6,6 +6,7 @@ import Header from "../header_sidebar/Header";
 function PropertyDetails(){
     return(
         <>
+        <hr></hr>
         <div className="prime">
         <Header/>
         <div className="main_section">
@@ -17,7 +18,7 @@ function PropertyDetails(){
 
             <div className="nav_section">
             <div className="navbar">
-                <div className="nav_one">
+                <div className="nav_one1">
                 <div className="basic"><span className="oa">1</span><span>    Basic Info</span></div>
 
                 </div>
@@ -25,11 +26,11 @@ function PropertyDetails(){
                 <div className="property"><span className="oa">2</span><span>    Property Details</span></div>
 
                 </div>
-                <div className="nav_three">
+                <div className="nav_3">
                 <div className="general"><span className="oa">3</span><span>General Info</span></div>
 
                 </div>
-                <div className="nav_four">
+                <div className="nav_fo">
                 <div className="loc"><span className="oa">4</span><span>Location Info</span></div>
 
                 </div>
@@ -39,7 +40,7 @@ function PropertyDetails(){
 
             
             <div className="form_section">
-            <form>
+            <form className="propertform">
                 <div className="form_row">
                 <div className="form_row_one">
 
@@ -199,17 +200,14 @@ function PropertyDetails(){
             </select>
             </div>
             </div>
-
-
            </div>
-          </form>
-          </div>
 
-            <div className="button_section">
+           <div className="button_section">
                     <Link to="/basicinfo"><button type="button" className="cancel">Previous</button></Link>
                     <Link to="/generalinfo"><button type="button" className="save2">Save & Continue</button></Link>
             </div>
-
+          </form>
+          </div>
         </div>
         </div>
         </>

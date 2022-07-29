@@ -1,17 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./BasicInfo.css";
+import Header from "../header_sidebar/Header";
 
 function BasicInfo(){
     return(
-        <div className="main">
-        <h2>ADD NEW PROPERTY</h2>
-        <div className="navbar">
-            <div className="basic"><span className="oa">1</span><span><Link to="/basicinfo" className="basic1">    Basic Info</Link></span></div>
-            <div className="property"><span className="oa">2</span><span><Link to="/propertydeatils" className="property1">    Property Details</Link></span></div>
-            <div className="general"><span className="oa">3</span><span><Link to="/generalinfo" className="general1">    General Info</Link></span></div>
-            <div className="loc"><span className="oa">4</span><span><Link to="/locationinfo" className="loc1">    Location Info</Link></span></div>
-        </div>
+        <>
+        <hr></hr>
+        <Header/>
+        <div className="main_section">
+
+            <div className="heading_section">
+                    <h2>ADD NEW PROPERTY</h2>
+            </div>
+
+
+            <div className="nav_section">
+            <div className="navbar">
+                <div className="nav_one">
+                <div className="basic"><span className="oa">1</span><span>    Basic Info</span></div>
+
+                </div>
+                <div className="nav_2">
+                <div className="property"><span className="oa">2</span><span>    Property Details</span></div>
+
+                </div>
+                <div className="nav_three3">
+                <div className="general"><span className="oa">3</span><span>General Info</span></div>
+
+                </div>
+                <div className="nav_f">
+                <div className="loc"><span className="oa">4</span><span>Location Info</span></div>
+
+                </div>
+            </div>
+
+            </div>
         <form className="basicform">
             <div className="box1">
             <div className="proType">
@@ -105,6 +129,7 @@ function BasicInfo(){
             <Link to="/propertydeatils"><button className="save2">Save & Continue</button></Link>
         </form>
         </div>
+        </>
     )
 }
 
