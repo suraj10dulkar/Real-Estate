@@ -12,8 +12,8 @@ body{
 .main_section{
     height:740px;
     width: 76%;
-    border: 1px solid black;
-    margin-top: -37%;
+    /* border: 1px solid black; */
+    margin-top: -40%;
     margin-left: 330px;
 }
 .main_section .heading_section{
@@ -34,8 +34,8 @@ body{
     margin-top: -20px;
     border-radius: 60px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-
 }
+
 .main_section .nav_section .navbar .nav_two .property{
     text-align: center;
     margin-top: 17px;
@@ -47,9 +47,10 @@ body{
 }
 .form_section{
     margin-left: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 30px;
-    height: 500px;
+    height: 750px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .form_row{
     display: flex;
@@ -155,3 +156,186 @@ body{
     width: 335px;
     height: 40px;
 }
+
+.len{
+    font-weight: bold;
+    color: gray;
+}
+
+.length{
+    width: 380px;
+    height: 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.breath{
+    font-weight: bold;
+    color: gray;
+}
+
+.bre{
+    width: 380px;
+    height: 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.Total-area{
+    font-weight: bold;
+    color: gray;
+}
+
+.area1{
+    width: 380px;
+    height: 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.area-unit{
+    font-weight: bold;
+    color: gray;
+}
+
+.areaunit{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.noofBHK{
+    font-weight: bold;
+    color: gray;
+}
+
+.bhk{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.nooffloor{
+    font-weight: bold;
+    color: gray;
+}
+
+.floor{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.attached{
+    font-weight: bold;
+    color: gray;
+}
+
+.attach{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.western{
+    font-weight: bold;
+    color: gray;
+}
+
+.toilet{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.furnished{
+    font-weight: bold;
+    color: gray;
+}
+
+.furnish{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.carparking{
+    font-weight: bold;
+    color: gray;
+}
+
+.car{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;  
+}
+
+.liftStatus{
+    font-weight: bold;
+    color: gray;
+}
+
+.lift{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;  
+}
+
+.electricity{
+    font-weight: bold;
+    color: gray;
+}
+
+.ele{
+    width: 380px;
+    height: 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;
+}
+
+.face{
+    font-weight: bold;
+    color: gray;
+}
+
+.facing{
+    width: 404px;
+    height: 56px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: grey;  
+}
+
