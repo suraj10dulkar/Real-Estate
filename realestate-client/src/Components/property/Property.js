@@ -1,16 +1,22 @@
 import React from "react";
 import { useState,useEffect} from "react";
+import { useNavigate } from 'react-router-dom'
 import {debounce} from "lodash";
 import { BsSearch } from "react-icons/bs";
 import {BiShow,BiPencil} from "react-icons/bi"
 import {FaImages} from "react-icons/fa";
 import axios from "axios";
+import { Cookies } from 'react-cookie';
 import Header from "../header_sidebar/Header";
 import './Property.css'
 
 const Property = () =>{
     const [value,setValue]= useState("");
     const [users,setUsers]= useState([]);
+    const cookies = new Cookies()
+    const token = cookies.get('jwt')
+    let navigate = useNavigate();
+
     // const [dataval,setDataval]=useState("")
 
     
@@ -43,18 +49,51 @@ const Property = () =>{
             })
        
     }
-    useEffect(()=>{
-        //axios.get("https://instaclone-10x-app.herokuapp.com/user")
-        axios.get("http://localhost:5000/signupuser")
-        .then(res=>{
-            setUsers(res.data.property)
-            console.log(res.data)
-            // console.log(res.data.property.email)
 
-        }).catch(err=>{
-            console.log(err)
-        })
-    },[value])
+    
+    useEffect(()=>{
+        const afterLogin = async ()=>{
+            try{
+                const res = await axios({
+                    method: 'get',
+                    url:"http://localhost:5000/user/property",
+                    headers: {
+                        Accept : "application/json",
+                        authorization: token,
+                        "Content-Type": "application/json"
+                      }, 
+                      credentials: "include"
+                })
+                console.log(res)
+            }catch(err){
+                console.log(err)
+                if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
+                    navigate("/")
+    
+                }
+            
+                // console.log(err)
+                // console.log(err.response.data === "Unauthorized user")
+    
+            }
+        }
+
+        afterLogin()
+        
+        
+        // console.log(`Cookie from property page => ${token}`)
+        //axios.get("https://instaclone-10x-app.herokuapp.com/user")
+        // axios.get("http://localhost:5000/signupuser")
+        // .then(res=>{
+        //     setUsers(res.data.property)
+        //     console.log(res.data)
+        //     // console.log(res.data.property.email)
+
+        // }).catch(err=>{
+        //     console.log(err)
+        // })
+    },[token, navigate])
+    // value,
     return(
         <>
             <hr></hr>
