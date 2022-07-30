@@ -41,11 +41,12 @@ export default function Signup() {
 
       }).then((response)=>{
         // console.log(response)
+        window.alert("User created successfully!")
         navigate("/")
       }).catch((err)=>{
           // console.log(err.response.data === "User already exists!")
           if(err.response.data === "User already exists!"){
-            window.alert("User already exists!")
+            window.alert("Email already exists!")
 
           }
       })
