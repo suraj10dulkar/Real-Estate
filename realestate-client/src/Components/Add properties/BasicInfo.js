@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./BasicInfo.css";
 import Header from "../header_sidebar/Header";
+import Axios from "axios"
 
 function BasicInfo(){
+    const [data, setdata]=useState({
+        property_type:"",
+        negotiable:"",
+        ownership:"",
+        price:"",
+        property_age:"",
+        property_approved:"",
+        property_description:"",
+        bank_loan:""
+    })
+
+    const handlebasic=()=>{
+        console.log(data)
+    }
+
+    
     return(
         <>
         <hr></hr>
@@ -36,12 +53,12 @@ function BasicInfo(){
             </div>
 
             </div>
-        <form className="basicform">
+        <form className="basicform" >
             <div className="box1">
             <div className="proType">
             <lable for="pro" id="pro">Propert Type</lable>
             <div>
-            <select name="pro" className="select">
+            <select value={data.property_type} name="pro" className="select" onChange={e=>setdata({...data,property_type: e.target.value})} >
                 <option value="Plot">Plot</option>
                 <option value="House">House</option>
                 <option value="Land">Land</option>
@@ -52,7 +69,7 @@ function BasicInfo(){
             <div className="negotableSelect">
             <lable for="nego" id="nego">Negotiable</lable>
             <div>
-            <select name="nego" className="select1">
+            <select name="nego" className="select1" onChange={e=>setdata({...data,negotiable: e.target.value})}>
                 <option value="Select">Select Nogtiable</option>
                 <option value="Nogtiable">NogtiableNogtiable</option>
                 <option value="Nogtiable">Nogtiable</option>
@@ -67,13 +84,13 @@ function BasicInfo(){
                 <div>
                     <label for="price">Price</label>
                 </div>
-                <input className="select3" placeholder="Example: 1000"></input>
+                <input className="select3" placeholder="Example: 1000" onChange={e=>setdata({...data,price: e.target.value})}></input>
             </div>
 
             <div className="ownershipSelect">
             <lable for="ownership" id="ownership">Ownership</lable>
             <div>
-            <select name="ownership" className="select4">
+            <select name="ownership" className="select4" onChange={e=>setdata({...data,ownership: e.target.value})}>
                 <option value="Self Owned">Self Owned</option>
                 <option value="Rented">Rented</option>
                 <option value="Family Owned">Family Owned</option>
@@ -86,7 +103,7 @@ function BasicInfo(){
             <div className="propertyageSelect">
             <lable for="propertyage" id="propertyage">Propert Age</lable>
             <div>
-            <select name="propertyage" className="select5">
+            <select name="propertyage" className="select5" onChange={e=>setdata({...data,property_age: e.target.value})}>
                 <option value="old">old</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="new">New</option>
@@ -96,7 +113,7 @@ function BasicInfo(){
             <div className="propertyapprovedSelect">
             <lable for="propertyapproved" id="propertyapproved">Property Approved</lable>
             <div>
-            <select name="propertyapproved" className="select6">
+            <select name="propertyapproved" className="select6" onChange={e=>setdata({...data,property_approved: e.target.value})}>
                 <option value="Property Approved">Property Approved</option>
                 <option value="Property Not Approved">Property Not Approved</option>
             </select>
@@ -109,13 +126,13 @@ function BasicInfo(){
                 <div>
                     <label for="Description">Desciption</label>
                 </div>
-                <input className="select7" ></input>
+                <input className="select7" onChange={e=>setdata({...data,property_description: e.target.value})} ></input>
             </div>
 
             <div className="BankLoanSelect">
             <lable for="BankLoan" id="BankLoan">Bank Loan</lable>
             <div>
-            <select name="BankLoan" className="select8">
+            <select name="BankLoan" className="select8" onChange={e=>setdata({...data,bank_loan: e.target.value})}>
                 <option value="Bank Loan">Bank Loan</option>
                 <option value="No Bank Loan">Bank Laon not Taken</option>
             </select>
@@ -126,7 +143,7 @@ function BasicInfo(){
             
             
             <Link to=""><button className="cancel">Cancel</button></Link>
-            <Link to="/propertydeatils"><button className="save2">Save & Continue</button></Link>
+            <Link to="/propertydeatils"><button className="save2" onClick={handlebasic}>Save & Continue</button></Link>
         </form>
         </div>
         </>
