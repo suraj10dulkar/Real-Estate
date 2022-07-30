@@ -1,9 +1,30 @@
-import React from "react";
+import React ,{ useState }from "react";
 import { Link } from "react-router-dom";
 import "./propertDetails.css"
 import Header from "../header_sidebar/Header";
 
 function PropertyDetails(){
+
+    const [data, setdata]=useState({
+        length:"",
+        breadth:"",
+        total_area:"",
+        area_unit:"",
+        no_of_bhk:"",
+        no_of_floors:"",
+        attached:"",
+        western_toilet:"",
+        furnished:"",
+        car_parking:"",
+        lift:"",
+        electricity:"",
+        facing:""
+    })
+
+    const handleproperty=()=>{
+        console.log(data)
+    }
+
     return(
         <>
         <hr></hr>
@@ -47,14 +68,14 @@ function PropertyDetails(){
                 <div className="len">
                 <label for="length">Length</label>
                 <div>
-                    <input className="length" placeholder="Example :1000"></input>
+                    <input className="length" placeholder="Example :1000" onChange={e=>setdata({...data,length: e.target.value})}></input>
                 </div>
                 </div>
 
                 <div className="breath">
                 <label for="breath">Breath</label>
                 <div>
-                    <input className="bre" placeholder="Example :1000"></input>
+                    <input className="bre" placeholder="Example :1000" onChange={e=>setdata({...data,breadth: e.target.value})}></input>
                 </div>
                </div>
                 
@@ -67,14 +88,14 @@ function PropertyDetails(){
             <div className="Total-area">
                 <label for="area">Total Area</label>
                 <div>
-                    <input className="area1" placeholder="Example :7500"></input>
+                    <input className="area1" placeholder="Example :7500" onChange={e=>setdata({...data,total_area: e.target.value})}></input>
                 </div>
             </div>
 
             <div className="area-unit">
             <lable for="unit" id="unit">Area Unit</lable>
             <div>
-            <select className="areaunit" name="unit">
+            <select className="areaunit" name="unit" onChange={e=>setdata({...data,area_unit: e.target.value})}>
                 <option value="meter">Meter Square</option>
                 <option value="yard">Yard Square</option>
                 <option value="cm">CM Square</option>
@@ -89,7 +110,7 @@ function PropertyDetails(){
            <div className="noofBHK">
             <lable for="bhk" id="bhk">No of BHK</lable>
             <div>
-            <select className="bhk" name="bhk">
+            <select className="bhk" name="bhk" onChange={e=>setdata({...data,no_of_bhk: e.target.value})}>
                 <option value="1-bhk">1 BHK</option>
                 <option value="2-bhk">2 BHK</option>
                 <option value="3-bhk">3 BHK</option>
@@ -100,7 +121,7 @@ function PropertyDetails(){
             <div className="nooffloor">
             <lable for="floor" id="floor">No of Floors</lable>
             <div>
-            <select className="floor" name="floor">
+            <select className="floor" name="floor" onChange={e=>setdata({...data,no_of_floors: e.target.value})}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -118,7 +139,7 @@ function PropertyDetails(){
             <div className="attached">
             <lable for="attach" id="attach">Attached</lable>
             <div>
-            <select className="attach" name="attach">
+            <select className="attach" name="attach" onChange={e=>setdata({...data,attached: e.target.value})}>
                 <option value="1-bhk">Select Attached</option>
                 <option value="2-bhk">Not Attached</option>
                 <option value="3-bhk">Attached</option>
@@ -129,7 +150,7 @@ function PropertyDetails(){
             <div className="western">
             <lable for="toilet" id="toilet">Western Toliet</lable>
             <div>
-            <select className="toilet"  name="attach">
+            <select className="toilet"  name="attach" onChange={e=>setdata({...data,western_toilet: e.target.value})}>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -144,7 +165,7 @@ function PropertyDetails(){
             <div className="furnished">
             <lable for="furn" id="furn">Furnished</lable> 
             <div>
-            <select className="furnish" name="furn">
+            <select className="furnish" name="furn" onChange={e=>setdata({...data,furnished: e.target.value})}>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -154,7 +175,7 @@ function PropertyDetails(){
             <div className="carparking">
             <lable for="car" id="car">Car Parking</lable>
             <div>
-            <select className="car" name="car">
+            <select className="car" name="car" onChange={e=>setdata({...data,car_parking: e.target.value})}>
                 <option value="south">South</option>
                 <option value="north">North</option>
                 <option value="east">East</option>
@@ -170,7 +191,7 @@ function PropertyDetails(){
             <div className="liftStatus">
             <lable for="lift" id="furn">Lift</lable>
             <div>
-            <select className="lift" name="lift">
+            <select className="lift" name="lift" onChange={e=>setdata({...data,lift: e.target.value})}>
                 <option value="present">Present</option>
                 <option value="absent">Absent</option>
             </select>
@@ -180,7 +201,7 @@ function PropertyDetails(){
             <div className="electricity">
                 <label for="ele">Electricity</label>
                 <div>
-                    <input className="ele" placeholder="Example :3 Phase"></input>
+                    <input className="ele" placeholder="Example :3 Phase" onChange={e=>setdata({...data,electricity: e.target.value})}></input>
                 </div>
             </div>
 
@@ -192,7 +213,7 @@ function PropertyDetails(){
            <div className="face">
             <lable for="facing" id="facing">Facing</lable>
             <div>
-            <select className="facing" name="facing">
+            <select className="facing" name="facing" onChange={e=>setdata({...data,facing: e.target.value})}>
                 <option value="south">South</option>
                 <option value="north">North</option>
                 <option value="east">East</option>
@@ -204,7 +225,7 @@ function PropertyDetails(){
 
            <div className="button_section">
                     <Link to="/basicinfo"><button type="button" className="cancel">Previous</button></Link>
-                    <Link to="/generalinfo"><button type="button" className="save2">Save & Continue</button></Link>
+                    <Link to="/generalinfo"><button type="button" className="save2" onClick={handleproperty} >Save & Continue</button></Link>
             </div>
           </form>
           </div>
