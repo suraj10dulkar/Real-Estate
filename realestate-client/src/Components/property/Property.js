@@ -131,22 +131,7 @@ const Property = () =>{
                 <p className="head_column_nine">Action</p>
             </div>
 
-<<<<<<< HEAD
-            <div className="property_row">
-                <p className="property_column_one">PPD1109</p>
-                <p className="property_column_two"><FaImages className="image"/></p>
-                <p className="property_column_three">Plot</p>
-                <p className="property_column_four">8748959678</p>
-                <p className="property_column_five">1290</p>
-                <p className="property_column_six">03</p>
-                <p className="property_column_seven"><button className="btn">Sold</button></p>
-                <p className="property_column_eight">10</p>
-                <p className="property_column_nine"><BiShow className="show"/><BiPencil className="edit"/></p>
-            </div>
-            {/* {[...users].map((user)=>{
-=======
             {[...users].map((user)=>{
->>>>>>> main
                 return(
                     <div className="property_row">
                     <p className="property_column_one">PPD1234</p>
@@ -167,13 +152,8 @@ const Property = () =>{
                 return(
                     <div> {user.email} </div>
                 )
-<<<<<<< HEAD
-            })}
-                 */}
-=======
             })} */}
                 
->>>>>>> main
             
         </>
     )
