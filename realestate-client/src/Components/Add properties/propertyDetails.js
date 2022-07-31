@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./propertDetails.css"
 import Header from "../header_sidebar/Header";
+import Sidebar from "../header_sidebar/Sidebar";
 
 function PropertyDetails(){
     return(
         <>
-        <hr></hr>
-        <div className="prime">
         <Header/>
+        <div className="prime">
+        <Sidebar/>
         <div className="main_section">
 
             <div className="heading_section">

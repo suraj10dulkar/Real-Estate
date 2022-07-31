@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./BasicInfo.css";
 import Header from "../header_sidebar/Header";
+import Sidebar from "../header_sidebar/Sidebar";
 
 function BasicInfo(){
     return(
         <>
-        <hr></hr>
         <Header/>
+        <Sidebar/>
         <div className="main_section">
 
             <div className="heading_section">
