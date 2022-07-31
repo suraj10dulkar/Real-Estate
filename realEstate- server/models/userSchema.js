@@ -197,19 +197,9 @@ const userSchema = new mongoose.Schema({
         required:true
         
     },
-
-    ppd_id:{
-        type:String
-        
-    },
     views:{
         type:Number,
-<<<<<<< HEAD
-        required:true,
         default:random_views
-=======
-        default:random_number
->>>>>>> main
         
     },
     status:{
@@ -219,13 +209,8 @@ const userSchema = new mongoose.Schema({
     },
     days_left:{
         type:Number,
-<<<<<<< HEAD
-        required:true,
         default:random_days
         
-=======
-        default:random_number  
->>>>>>> main
     }
 
 });

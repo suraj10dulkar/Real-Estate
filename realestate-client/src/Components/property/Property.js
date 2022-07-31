@@ -1,11 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { useState,useEffect} from "react";
-=======
 import { useState,useEffect} from "react";
 import { Link } from "react-router-dom";
->>>>>>> main
 import { useNavigate } from 'react-router-dom'
 import {debounce} from "lodash";
 import { BsSearch } from "react-icons/bs";

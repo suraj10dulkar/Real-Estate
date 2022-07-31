@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./BasicInfo.css";
-<<<<<<< HEAD
-import Sidebar from "../header_sidebar/Sidebar";
-import Header from "../header_sidebar/Header";
-=======
 import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
->>>>>>> main
 
 function BasicInfo(){
     let navigate = useNavigate();
