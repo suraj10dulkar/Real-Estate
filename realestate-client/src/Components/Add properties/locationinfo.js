@@ -1,10 +1,17 @@
-import React ,{ useState } from "react";
-import { Link } from "react-router-dom";
+import React ,{ useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./locationinfo.css"
 import Header from "../header_sidebar/Header";
+import axios from "axios";
+import { Cookies } from 'react-cookie';
 import Sidebar from "../header_sidebar/Sidebar";
 
 function LocationInfo(){
+    let navigate = useNavigate();
+    const cookies = new Cookies()
+    const token = cookies.get('jwt')
+    const [allData, setAllData]= useState({})
+    const [dataSent, setDataSent]=useState(false)
 
     const [data, setdata]=useState({
         email:"",
@@ -17,8 +24,64 @@ function LocationInfo(){
         longitude:"",
     })
 
-    const handlelocation=()=>{
-        console.log(data)
+    
+
+    useEffect(() => {
+        // const basicInfoFromLocalstorage = JSON.parse(localStorage.getItem('BASIC_INFO'));
+        // console.log(itemsFromLocalstorage)
+        const sendData = ()=>{
+            axios({
+                method : 'post',
+                url : 'http://localhost:5000/addproperty', 
+                headers: {
+                    Accept : "application/json",
+                    authorization: token,
+                    "Content-Type": "application/json"
+                  },
+                data : allData
+    
+            }).then((res)=>{
+                window.alert("Data posted successfully!")
+                localStorage.removeItem('BASIC_INFO');
+                localStorage.removeItem('PROPERTY_DETAILS');
+                localStorage.removeItem('GENERAL_INFO');
+                console.log(res)
+                navigate("/")
+            }).catch((err)=>{
+                console.log(err)
+    
+            })
+        }
+
+        if(dataSent){
+            sendData()
+            setDataSent(false)
+        }
+      
+    
+      
+    }, [allData,dataSent, navigate, token])
+
+    
+    
+
+    const handlelocation=(e)=>{
+        e.preventDefault();
+        const basicInfoFromLocalstorage = JSON.parse(localStorage.getItem('BASIC_INFO'));
+        const propertyInfoFromLS = JSON.parse(localStorage.getItem('PROPERTY_DETAILS'));
+        const generalInfoFromLS = JSON.parse(localStorage.getItem('GENERAL_INFO'));
+        // localStorage.setItem('LOCATION_INFO', JSON.stringify(data));
+        const ALLDATA ={
+            ...basicInfoFromLocalstorage,
+            ...propertyInfoFromLS,
+            ...generalInfoFromLS,
+            ...data
+        }
+        
+        console.log(ALLDATA)
+        setAllData(ALLDATA)
+        setDataSent(true)
+
     }
 
     
@@ -55,7 +118,7 @@ function LocationInfo(){
 
             </div>
 
-        <form className="locationform">
+        <form className="locationform" onSubmit={handlelocation}>
 
 
             <div className="box12">
@@ -78,6 +141,7 @@ function LocationInfo(){
             <lable for="city" id="city">City</lable>
             <div>
             <select name="city" className="select14" onChange={e=>setdata({...data,city: e.target.value})}>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Bangalore">Bangalore</option>
                 <option value="mumbai">Mumbai</option>
                 <option value="delhi">Delhi</option>
@@ -91,6 +155,7 @@ function LocationInfo(){
             <lable for="area" id="area">Area</lable>
             <div>
             <select name="area" className="select15" onChange={e=>setdata({...data,area: e.target.value})}>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="pune">Pune</option>
                 <option value="jodhpur">Jodhpur</option>
                 <option value="goa">Goa</option>
@@ -105,6 +170,7 @@ function LocationInfo(){
             <lable for="pincode" id="pincode">Pincode</lable>
             <div>
             <select name="pincode" className="select16" onChange={e=>setdata({...data,pincode: e.target.value})}>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="512468">512468</option>
                 <option value="987456">987456</option>
                 <option value="123456">123456</option>
@@ -135,7 +201,7 @@ function LocationInfo(){
         </div>
         </div>
         <Link to="/generalinfo"><button className="prev3">Previous</button></Link>
-        <button className="save2" onClick={handlelocation}>ADD PROPERTY</button>
+        <button className="save2" type="submit">ADD PROPERTY</button>
         </form>
 
         
