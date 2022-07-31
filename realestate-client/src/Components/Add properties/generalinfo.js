@@ -1,12 +1,16 @@
 import React ,{ useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./generalinfo.css"
 import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
 import Filebase64 from "react-file-base64";
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 
 function GeneralInfo(){
-
+    let navigate = useNavigate();
     const [data, setdata]=useState({
         name:"",
         mobile:"",
@@ -17,8 +21,12 @@ function GeneralInfo(){
         image:""
     })
 
-    const handlegeneral=()=>{
+    const handlegeneral=(e)=>{
+        e.preventDefault();
+        localStorage.setItem('GENERAL_INFO', JSON.stringify(data));
         console.log(data)
+        navigate("/locationinfo")
+
     }
 
     
@@ -56,13 +64,14 @@ function GeneralInfo(){
 </div>
         
 
-        <form className="generalinfo">
+        <form className="generalinfo" onSubmit={handlegeneral}>
 
             <div className="box9">
             <div className="name">
-            <lable for="name" id="name">Ownership</lable>
+            <lable for="name" id="name">Name</lable>
             <div>
             <select name="name" className="select9" onChange={e=>setdata({...data,name: e.target.value})}>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Owner">Owner</option>
                 <option value="Self">Sellf</option>
                 <option value="Family Member">Family Member</option>
@@ -83,7 +92,7 @@ function GeneralInfo(){
             <lable for="post" id="post">Posted By</lable>
             <div>
             <select name="post" className="select10" onChange={e=>setdata({...data,posted_by: e.target.value})}>
-                <option value="postedby">Posted By</option>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Self">Sellf</option>
                 <option value="Family Member">Family Member</option>
             </select>
@@ -94,7 +103,7 @@ function GeneralInfo(){
             <lable for="sale" id="sale">Sale Type</lable>
             <div>
             <select name="sale" className="select11" onChange={e=>setdata({...data,sale_type: e.target.value})}>
-                <option value="Please Select">Please Select</option>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
@@ -107,7 +116,7 @@ function GeneralInfo(){
             <lable for="pack" id="pack">Featured Packages</lable>
             <div>
             <select name="pack" className="select12" onChange={e=>setdata({...data,featured_package: e.target.value})}>
-                <option value="Please Select">Please Select</option>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
@@ -118,7 +127,7 @@ function GeneralInfo(){
             <lable for="ppd" id="ppd">PPD Packages</lable>
             <div>
             <select name="ppd" className="select13" onChange={e=>setdata({...data,ppd_package: e.target.value})}>
-                <option value="Please Select">Please Select</option>
+                <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
@@ -134,14 +143,16 @@ function GeneralInfo(){
                         id="upload"
                         type="file"
                         multiple={false}
-                        onDone={({ base64 }) => setdata({ ...data,image: base64 })}
+                        onDone={({base64}) => setdata({ ...data,image: base64 })}
                 />
                 
                 </div>
             </div>
 
+
             <Link to="/propertydeatils"><button className="prev2">Previous</button></Link>
-            <Link to="/locationinfo"><button className="save2" onClick={handlegeneral}>Save & Continue</button></Link>
+            <button className="save2" type="submit">Save & Continue</button>
+                
 
         </form>
 

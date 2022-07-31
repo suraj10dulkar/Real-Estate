@@ -8,54 +8,58 @@ const arr=['Sold','Unsold']
 const random_string= arr[Math.floor(Math.random()*arr.length)];
 
 const userSchema = new mongoose.Schema({
+    // BASIC INFO
+    //-----------------------------------------------
     property_type:{
-            type:String,
-            required:true
-    },
-    price:{
-            type:Number,
-            required:true
-
-    },
-    property_age:{
-            type:String,
-            required:true
-    },
-    property_description:{
-            type:String,
-            required:true
+        type:String,
+        required:true
     },
     negotiable:{
-            type:String,
-            required:true
+        type:String,
+        required:true
     },
     ownership:{
         type:String,
         required:true
         
     },
+    price:{
+        type:Number,
+        required:true
+
+    },
+    property_age:{
+        type:String,
+        required:true
+    },
     property_approved:{
         type:String,
         required:true
         
+    },
+    property_description:{
+        type:String,
+        required:true
     },
     bank_loan:{
         type:String,
         required:true
         
     },
+    //PROPERTY DETAILS
+    //-----------------------------------
     length:{
-        type:String,
+        type:Number,
         required:true
         
     },
     breadth:{
-        type:String,
+        type:Number,
         required:true
         
     },
     total_area:{
-        type:String,
+        type:Number,
         required:true
         
     },
@@ -65,7 +69,7 @@ const userSchema = new mongoose.Schema({
         
     },
     no_of_bhk:{
-        type:Number,
+        type:String,
         required:true
         
     },
@@ -112,14 +116,13 @@ const userSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true,
-        minlength:4
+        min:4
         
     },
     mobile:{
         type:Number,
         required:true,
-        min:10,
-        unique:true
+        min:10
         
     },
     posted_by:{
@@ -150,7 +153,6 @@ const userSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
-        unique:[true,"Email id is already present"],
         validate(value){
             if(!validator.isEmail(value))
             {
@@ -170,10 +172,9 @@ const userSchema = new mongoose.Schema({
         
     },
     pincode:{
-        type:Number,
+        type:String,
         required:true,
-        min:6,
-        max:6
+        min:6
         
     },
     address:{
@@ -196,23 +197,35 @@ const userSchema = new mongoose.Schema({
         required:true
         
     },
+
+    ppd_id:{
+        type:String
+        
+    },
     views:{
         type:Number,
+<<<<<<< HEAD
         required:true,
         default:random_views
+=======
+        default:random_number
+>>>>>>> main
         
     },
     status:{
         type:String,
-        required:true,
         default:random_string
         
     },
     days_left:{
         type:Number,
+<<<<<<< HEAD
         required:true,
         default:random_days
         
+=======
+        default:random_number  
+>>>>>>> main
     }
 
 });

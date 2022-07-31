@@ -2,19 +2,17 @@ const express = require("express");
 const userModal = require("../models/userSchema");
 const router = express.Router();
 const Authenticate = require("../middleware/Authenticate")
-// const auth = (req, res, next)=>{
-//    const userEmail = jwt.verify(req.headers.authorization, process.env.SECRET_KEY);
 
-// }
 
-router.post("/add", async(req,res)=>{
+router.post("/addproperty", async(req,res)=>{
     try{
         const users = new userModal(req.body);
         const createUser = await users.save();
         res.status(201).send(createUser);
     }
     catch(e){
-        res.status(400).send(e);
+        res.status(400).send("Error in catch");
+        console.log(e)
     }
 });
 

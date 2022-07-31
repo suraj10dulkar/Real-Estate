@@ -8,7 +8,9 @@ const Authenticate = async(req, res, next)=>{
         if(verifyToken){
             const userDetail = await signupModal.find({email : verifyToken })
             // console.log(verifyToken)
+
             if(userDetail.length){
+                // console.log(userDetail)
                 next()
             }else{
                 res.status(409).send("User not found")

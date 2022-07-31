@@ -1,6 +1,11 @@
 import React from "react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { useState,useEffect} from "react";
+=======
+import { useState,useEffect} from "react";
+import { Link } from "react-router-dom";
+>>>>>>> main
 import { useNavigate } from 'react-router-dom'
 import {debounce} from "lodash";
 import { BsSearch } from "react-icons/bs";
@@ -73,17 +78,18 @@ const Property = () =>{
                         Accept : "application/json",
                         authorization: token,
                         "Content-Type": "application/json"
-                      }, 
-                      credentials: "include"
+                      }
                 })
                 console.log(res.data.property)
                 setUsers(res.data.property)
             }catch(err){
                 console.log(err)
-                if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
-                    navigate("/")
-    
+                if(err){
+                    navigate("/login")
                 }
+                // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
+                //     navigate("/login")
+                // }
             
                 // console.log(err)
                 // console.log(err.response.data === "Unauthorized user")

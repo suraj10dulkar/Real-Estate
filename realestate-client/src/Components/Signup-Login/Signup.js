@@ -41,8 +41,8 @@ export default function Signup() {
 
       }).then((response)=>{
         // console.log(response)
-        window.alert("User created successfully!")
-        navigate("/")
+        window.alert("User created successfully!\n Please Login First.")
+        navigate("/login")
       }).catch((err)=>{
           // console.log(err.response.data === "User already exists!")
           if(err.response.data === "User already exists!"){
