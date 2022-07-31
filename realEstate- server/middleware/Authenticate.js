@@ -7,8 +7,10 @@ const Authenticate = async(req, res, next)=>{
         const verifyToken = jwt.verify(token, process.env.SECRET_KEY)
         if(verifyToken){
             const userDetail = await signupModal.find({email : verifyToken })
-            // console.log(verifyToken)
+            console.log(verifyToken)
+
             if(userDetail.length){
+                // console.log(userDetail)
                 next()
             }else{
                 res.status(409).send("User not found")

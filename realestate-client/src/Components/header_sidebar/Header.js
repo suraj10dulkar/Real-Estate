@@ -10,11 +10,11 @@ const Header = () =>{
                     <h1>Logo</h1>
                     <div className='content'>
                     <h2>Property</h2>
-                    <h2>Assitance</h2>
-                    <h2>Recieved Intrest</h2>
-                    <h2>Sent Intrest</h2>
+                    <h2>Assistance</h2>
+                    <h2>Received Interest</h2>
+                    <h2>Sent Interest</h2>
                     <h2>Property Views</h2>
-                    <h2>Traffic Plans</h2>
+                    <h2>Traffic Plan</h2>
                     </div>
                 </div>
 
