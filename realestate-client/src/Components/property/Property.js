@@ -1,5 +1,6 @@
 import React from "react";
 import { useState,useEffect} from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 import {debounce} from "lodash";
 import { BsSearch } from "react-icons/bs";
@@ -8,6 +9,7 @@ import {FaImages} from "react-icons/fa";
 import axios from "axios";
 import { Cookies } from 'react-cookie';
 import Header from "../header_sidebar/Header";
+import Sidebar from "../header_sidebar/Sidebar";
 import './Property.css'
 
 const Property = () =>{
@@ -97,8 +99,9 @@ const Property = () =>{
     // value,
     return(
         <>
-            <hr></hr>
+            {/* <hr></hr> */}
                 <Header/>
+                <Sidebar/>
             <div className="row_search_bar">
                 <div className="boxContainer">
                     <table className="elementsContainer">
@@ -116,10 +119,10 @@ const Property = () =>{
                     </table>
                 </div>
             </div>
-            <div className="button_div">
-            <button><span className="plus">+</span><span className="text_btn">Add Property</span></button>
-              
+            <Link to="/basicinfo"> <div className="button_div">
+            <button className="btn_add"><span className="plus">+</span><span className="text_btn">Add Property</span></button>          
             </div>
+            </Link>
             <div className="main_row">
                 <p className="head_column_one">PPDID</p>
                 <p className="head_column_two">Image</p>

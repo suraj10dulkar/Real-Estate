@@ -4,7 +4,7 @@ import "./locationinfo.css"
 import Header from "../header_sidebar/Header";
 import axios from "axios";
 import { Cookies } from 'react-cookie';
-
+import Sidebar from "../header_sidebar/Sidebar";
 
 function LocationInfo(){
     let navigate = useNavigate();
@@ -87,8 +87,8 @@ function LocationInfo(){
     
     return(
         <>
-        <hr></hr>
         <Header/>
+        <Sidebar/>
         <div className="main_section">
 
             <div className="heading_section">

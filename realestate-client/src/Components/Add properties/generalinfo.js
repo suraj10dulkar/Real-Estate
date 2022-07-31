@@ -2,6 +2,7 @@ import React ,{ useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./generalinfo.css"
 import Header from "../header_sidebar/Header";
+import Sidebar from "../header_sidebar/Sidebar";
 import Filebase64 from "react-file-base64";
 
 function GeneralInfo(){
@@ -27,8 +28,8 @@ function GeneralInfo(){
     
     return(
         <>
-        <hr></hr>
         <Header/>
+        <Sidebar/>
         <div className="main_section">
 
 <div className="heading_section">
