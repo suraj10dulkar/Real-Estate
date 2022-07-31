@@ -1,7 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const app = express();
-const propertyController = require("./routes/propertyRoute");
+const userController = require("./routes/userRoute");
 const signupLoginController = require("./routes/signupLoginRoute")
 const port = process.env.PORT || 5000 ;
 const cors = require("cors")
@@ -36,5 +36,5 @@ app.listen(port, (err)=>{
 //     res.status(200).send("Realestate Backend server zw")
 // })
 
-app.use(propertyController);
+app.use(userController);
 app.use(signupLoginController);

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 
-const propertySchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     // BASIC INFO
     //-----------------------------------------------
     property_type:{
@@ -210,5 +210,5 @@ const propertySchema = new mongoose.Schema({
 
 });
 
-const PropertyDetailModal = new mongoose.model('propertyDetail',propertySchema);
-module.exports = PropertyDetailModal;
+const userModal = new mongoose.model('user',userSchema);
+module.exports = userModal;
