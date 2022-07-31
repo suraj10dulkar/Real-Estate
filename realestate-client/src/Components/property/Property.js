@@ -9,6 +9,7 @@ import {FaImages} from "react-icons/fa";
 import axios from "axios";
 import { Cookies } from 'react-cookie';
 import Header from "../header_sidebar/Header";
+import {Link} from "react-router-dom"
 import Sidebar from "../header_sidebar/Sidebar";
 import './Property.css'
 

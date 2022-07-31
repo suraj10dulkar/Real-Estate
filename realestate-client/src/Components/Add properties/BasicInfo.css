@@ -56,41 +56,50 @@ hr{
     text-align: center;
 }
 
-/* .basic:hover{
-    background-color: aqua;
-    height: 100%;
-} */
 
 .box1{
     display: flex;
     margin-left: 3%;
-    margin-top: 4%;
+    padding-top: 5%;
+    font-weight: 200;
+    font-weight: 400;
 }
 
 .proType{
-    font-weight: bold;
+    color: rgb(54, 94, 43);
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .select{
-    width: 500px;
+    width: 510px;
     height: 50px;
+    border: 1px solid  rgb(130, 158, 122);
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-size: 16px;
+    color: rgb(89, 128, 78);
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
 }
 
 .negotableSelect{
-    margin-left: 5%;
-    font-weight: bold;
+    margin-left: 2%;
+    color: rgb(54, 94, 43);
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .select1{
-    width: 500px;
+    width: 510px;
     height: 50px;
+    border: 1px solid  rgb(130, 158, 122);
     border-radius: 10px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: large;
+    font-size: 16px;
     color: grey;
 }
 
@@ -102,30 +111,35 @@ hr{
 }
 
 .select3{
-    width: 470px;
+    width: 485px;
     height: 26px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
-    color: grey;
+    font-weight: 500;
+    font-size: 16px;
+    color:  grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .select4{
-    width: 500px;
+    width: 510px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
 }
 
 .ownershipSelect{
-    margin-left: 5%;
-    font-weight: bold;
+    margin-left: 2%;
+    color: rgb(54, 94, 43);
+    font-weight: bolder;
+    font-size: medium;
 }
 
 .priceSelect{
-    font-weight: bold;
+    color: rgb(54, 94, 43);
+    font-weight: bolder;
+    font-size: medium;
 }
 
 .box3{
@@ -135,31 +149,35 @@ hr{
 }
 
 .select5{
-    width: 500px;
+    width: 510px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
-    color: grey;
-
+    font-weight: 500;
+    font-size: 16px;
+    color:  grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .select6{
-    width: 500px;
+    width: 510px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
-    color: grey;
+    font-weight: 500;
+    font-size: 16px;
+    color:  grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .propertyageSelect{
-    font-weight: bold;
+    color: rgb(54, 94, 43);
+    font-weight: bolder;
+    font-size: medium;
 }
 
 .propertyapprovedSelect{
-    font-weight: bold;
-    margin-left: 5%;
+    font-weight: bolder;
+    margin-left: 2%;
+    color: rgb(54, 94, 43);
 }
 
 .box4{
@@ -169,41 +187,44 @@ hr{
 }
 
 .select7{
-    width: 470px;
+    width: 485px;
     height: 26px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
     color: grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .select8{
-    width: 500px;
+    width: 510px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
 }
 
 .desciprtion{
-    font-weight: bold;
+    font-weight: bolder;
+    color: rgb(54, 94, 43);
 }
 
 .BankLoanSelect{
     font-weight: bold;
-    margin-left: 5%;
+    margin-left: 2%;
+    font-weight: bolder;
+    color: rgb(54, 94, 43);
 }
 
 .cancel{
-    border-radius: 4em / 3em;
+    border-radius: 4em / 4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px;
-    width: 16%;
+    width: 14%;
     height: 60px;
-    background-color: rgb(69, 178, 233);
+    background-color: rgb(90, 188, 240);
     margin-left: 30%;
     margin-top: 4%;
-    font-weight: bolder;
+    font-weight: 530;
     color: white;
     font-size: large;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -211,15 +232,16 @@ hr{
 }
 
 .save2{
-    border-radius: 4em / 3em;
+    border-radius: 4em / 4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px;
-    width: 20%;
+    width: 16%;
     height: 60px;
     background-color: white;
-    background-color: rgb(23, 95, 239);
+    background-color: rgb(71, 82, 163);
     margin-left: 5%;
     margin-top: 4%;
-    font-weight: bolder;
+    font-weight: 530;
     color: white;
     font-size: large;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -229,7 +251,7 @@ hr{
 .basicform{
     margin-left: 5%;
     border-radius: 10px;
-    height: 550px;
+    height: 600px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 

@@ -12,24 +12,28 @@
     margin-left: 3%;
     margin-top: 3%;
     font-weight: bold;
+    padding-top: 3%;
+    color: grey;
 }
 
 .select9{
-    width: 450px;
+    width: 480px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .mobile{
-    width: 420px;
+    width: 430px;
     height: 26px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .name{
@@ -38,7 +42,7 @@
 }
 
 .mob{
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .box10{
@@ -46,14 +50,15 @@
     margin-left: 5%;
     margin-top: 3%;
     font-weight: bold;
+    color: grey;
 }
 
 .select10{
-    width: 450px;
+    width: 480px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
 }
 
@@ -61,13 +66,13 @@
     width: 450px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
 }
 
 .saletype{
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .box11{
@@ -75,39 +80,29 @@
     margin-left: 5%;
     margin-top: 3%;
     font-weight: bold;
-}
-
-.select12{
-    width: 450px;
-    height: 50px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
     color: grey;
 }
 
+.select12{
+    width: 480px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: grey;
+}
+.ppd-Package{
+    margin-left: 3%;
+}
 .select13{
     width: 450px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
 }
 
-.prev2{
-    border-radius: 4em / 3em;
-    padding: 20px;
-    width: 16%;
-    height: 60px;
-    background-color: rgb(69, 178, 233);
-    margin-left: 30%;
-    margin-top: 4%;
-    font-weight: bolder;
-    color: white;
-    font-size: large;
-    border: 0px;
-}
 
 .main_section .nav_section .navbar .nav_three{
     background-color: rgb(86, 191, 247);
@@ -124,6 +119,24 @@
     text-align: center;
     margin-top: 17px;
     color: white;
+}
+
+.save3{
+    border-radius: 4em / 4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    width: 18%;
+    height: 60px;
+    background-color: white;
+    background-color: rgb(71, 82, 163);
+    margin-left: 5%;
+    margin-top: 4%;
+    font-weight: 530;
+    color: white;
+    font-size: large;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border: 0px;
+    text-align: center;
 }
 
 /* .upload_box input[type="file" i]{
