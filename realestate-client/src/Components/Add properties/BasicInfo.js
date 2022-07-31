@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./BasicInfo.css";
 import Header from "../header_sidebar/Header";
-<<<<<<< HEAD
 import Sidebar from "../header_sidebar/Sidebar";
-=======
-import Axios from "axios"
->>>>>>> main
 
 function BasicInfo(){
     const [data, setdata]=useState({
