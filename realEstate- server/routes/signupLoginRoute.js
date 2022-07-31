@@ -9,6 +9,9 @@ const jwt = require('jsonwebtoken');
 //TO GENERATE OUR SECRET KET
 //crypto.randomBytes(64).toString("hex")
 
+// const generateToken = async()=>{
+
+// }
 
 router.post("/login", (req, res)=>{
     signupModal.find({email: req.body.email}).then((data)=>{
@@ -17,8 +20,12 @@ router.post("/login", (req, res)=>{
         }else{
             bcrypt.compare(req.body.password, data[0].password).then(function(result) {
                 if(result){
+
                     const authToken = jwt.sign(data[0].email, process.env.SECRET_KEY)
-                    // res.cookie("jwt", authToken)
+                    // res.cookie("jwtoken", "thisIsSomeRandomCookieValuePassedThroughBackend", {
+                    //     expires: new Date(Date.now()+100000),
+                    //     httpOnly: true
+                    // })
                     res.status(200).send({authToken})
                     
                 }else{

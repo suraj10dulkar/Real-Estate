@@ -31,9 +31,10 @@ export default function Login() {
 
       }).then((response)=>{
         let token = response.data.authToken
-        setCookie("jwt", token,  { path: '/' })
-        console.log(token)
+        setCookie("jwt", token,  { path: '/' , expires:new Date(Date.now()+3.6e+6)})
+        // console.log(token)
         // console.log(response.data.authToken)
+        window.alert("Login successfull")
         navigate("/property")
       }).catch((err)=>{
           console.log(err)
@@ -53,7 +54,7 @@ export default function Login() {
     
     
   }, [loginDetails, dataSent, navigate,cookies, setCookie])
-
+  
   return (
     <>
     <div className='L-container'>
