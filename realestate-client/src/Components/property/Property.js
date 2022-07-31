@@ -1,10 +1,6 @@
 import React from "react";
 import { useState,useEffect} from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import { useNavigate } from 'react-router-dom'
->>>>>>> main
 import {debounce} from "lodash";
 import { BsSearch } from "react-icons/bs";
 import {BiShow,BiPencil} from "react-icons/bi"
@@ -12,6 +8,7 @@ import {FaImages} from "react-icons/fa";
 import axios from "axios";
 import { Cookies } from 'react-cookie';
 import Header from "../header_sidebar/Header";
+import {Link} from "react-router-dom"
 import Sidebar from "../header_sidebar/Sidebar";
 import './Property.css'
 

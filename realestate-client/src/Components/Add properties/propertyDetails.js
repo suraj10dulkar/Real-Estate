@@ -97,6 +97,7 @@ function PropertyDetails(){
             <lable for="unit" id="unit">Area Unit</lable>
             <div>
             <select className="areaunit" name="unit" onChange={e=>setdata({...data,area_unit: e.target.value})}>
+                <option value="Not Selected">Area Unit</option>
                 <option value="meter">Meter Square</option>
                 <option value="yard">Yard Square</option>
                 <option value="cm">CM Square</option>
@@ -112,6 +113,7 @@ function PropertyDetails(){
             <lable for="bhk" id="bhk">No of BHK</lable>
             <div>
             <select className="bhk" name="bhk" onChange={e=>setdata({...data,no_of_bhk: e.target.value})}>
+                <option value="Not Selected">Select No of BHK</option>
                 <option value="1-bhk">1 BHK</option>
                 <option value="2-bhk">2 BHK</option>
                 <option value="3-bhk">3 BHK</option>
@@ -123,6 +125,7 @@ function PropertyDetails(){
             <lable for="floor" id="floor">No of Floors</lable>
             <div>
             <select className="floor" name="floor" onChange={e=>setdata({...data,no_of_floors: e.target.value})}>
+            <option value="Not Selected">Select No of Floor</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -141,9 +144,9 @@ function PropertyDetails(){
             <lable for="attach" id="attach">Attached</lable>
             <div>
             <select className="attach" name="attach" onChange={e=>setdata({...data,attached: e.target.value})}>
-                <option value="1-bhk">Select Attached</option>
-                <option value="2-bhk">Not Attached</option>
-                <option value="3-bhk">Attached</option>
+                <option value="Not Selected">Select Attached</option>
+                <option value="Not-Attached">Not Attached</option>
+                <option value="Attached">Attached</option>
             </select>
             </div>
             </div>
@@ -152,6 +155,7 @@ function PropertyDetails(){
             <lable for="toilet" id="toilet">Western Toliet</lable>
             <div>
             <select className="toilet"  name="attach" onChange={e=>setdata({...data,western_toilet: e.target.value})}>
+            <option value="Not Selected">Select Western Toliet</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -167,6 +171,7 @@ function PropertyDetails(){
             <lable for="furn" id="furn">Furnished</lable> 
             <div>
             <select className="furnish" name="furn" onChange={e=>setdata({...data,furnished: e.target.value})}>
+            <option value="Not Selected">Select Furnished</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -177,6 +182,7 @@ function PropertyDetails(){
             <lable for="car" id="car">Car Parking</lable>
             <div>
             <select className="car" name="car" onChange={e=>setdata({...data,car_parking: e.target.value})}>
+            <option value="Not Selected">Select Car Parking</option>
                 <option value="south">South</option>
                 <option value="north">North</option>
                 <option value="east">East</option>
@@ -193,6 +199,7 @@ function PropertyDetails(){
             <lable for="lift" id="furn">Lift</lable>
             <div>
             <select className="lift" name="lift" onChange={e=>setdata({...data,lift: e.target.value})}>
+            <option value="Not Selected">Select Lift</option>
                 <option value="present">Present</option>
                 <option value="absent">Absent</option>
             </select>
@@ -215,6 +222,7 @@ function PropertyDetails(){
             <lable for="facing" id="facing">Facing</lable>
             <div>
             <select className="facing" name="facing" onChange={e=>setdata({...data,facing: e.target.value})}>
+                <option value="Not Selected">Select Facing</option>
                 <option value="south">South</option>
                 <option value="north">North</option>
                 <option value="east">East</option>

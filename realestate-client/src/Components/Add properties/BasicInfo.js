@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./BasicInfo.css";
 import Header from "../header_sidebar/Header";
-<<<<<<< HEAD
 import Sidebar from "../header_sidebar/Sidebar";
-=======
-import Axios from "axios"
->>>>>>> main
 
 function BasicInfo(){
     const [data, setdata]=useState({
@@ -63,6 +59,7 @@ function BasicInfo(){
             <lable for="pro" id="pro">Propert Type</lable>
             <div>
             <select value={data.property_type} name="pro" className="select" onChange={e=>setdata({...data,property_type: e.target.value})} >
+                <option value="Not-Selected">Select Propert Type</option>
                 <option value="Plot">Plot</option>
                 <option value="House">House</option>
                 <option value="Land">Land</option>
@@ -95,6 +92,7 @@ function BasicInfo(){
             <lable for="ownership" id="ownership">Ownership</lable>
             <div>
             <select name="ownership" className="select4" onChange={e=>setdata({...data,ownership: e.target.value})}>
+            <option value="Not-Selected">Select Ownership</option>
                 <option value="Self Owned">Self Owned</option>
                 <option value="Rented">Rented</option>
                 <option value="Family Owned">Family Owned</option>
@@ -108,6 +106,7 @@ function BasicInfo(){
             <lable for="propertyage" id="propertyage">Propert Age</lable>
             <div>
             <select name="propertyage" className="select5" onChange={e=>setdata({...data,property_age: e.target.value})}>
+            <option value="Not-Selected">Select Property Age</option>
                 <option value="old">old</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="new">New</option>

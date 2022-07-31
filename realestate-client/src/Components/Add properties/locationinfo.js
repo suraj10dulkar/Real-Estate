@@ -59,7 +59,7 @@ function LocationInfo(){
 
 
             <div className="box12">
-            <div className="email">
+            <div className="email1">
                 <label for="email">Email</label>
                 <div>
                     <input className="email" placeholder="Email" onChange={e=>setdata({...data,email: e.target.value})}></input>

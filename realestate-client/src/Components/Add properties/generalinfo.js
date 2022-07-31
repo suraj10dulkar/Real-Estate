@@ -2,11 +2,9 @@ import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
 import "./generalinfo.css"
 import Header from "../header_sidebar/Header";
-<<<<<<< HEAD
 import Sidebar from "../header_sidebar/Sidebar";
-=======
 import Filebase64 from "react-file-base64";
->>>>>>> main
+
 
 function GeneralInfo(){
 
@@ -63,7 +61,7 @@ function GeneralInfo(){
 
             <div className="box9">
             <div className="name">
-            <lable for="name" id="name">Ownership</lable>
+            <lable for="name" id="name">Name</lable>
             <div>
             <select name="name" className="select9" onChange={e=>setdata({...data,name: e.target.value})}>
                 <option value="Owner">Owner</option>
@@ -143,8 +141,8 @@ function GeneralInfo(){
                 </div>
             </div>
 
-            <Link to="/propertydeatils"><button className="prev2">Previous</button></Link>
-            <Link to="/locationinfo"><button className="save2" onClick={handlegeneral}>Save & Continue</button></Link>
+            <Link to="/propertydeatils"><button className="cancel">Previous</button></Link>
+            <Link to="/locationinfo"><button className="save3" onClick={handlegeneral}>Save & Continue</button></Link>
 
         </form>
 
