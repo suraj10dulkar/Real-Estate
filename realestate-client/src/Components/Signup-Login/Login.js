@@ -34,8 +34,8 @@ export default function Login() {
         setCookie("jwt", token,  { path: '/' , expires:new Date(Date.now()+3.6e+6)})
         // console.log(token)
         // console.log(response.data.authToken)
-        window.alert("Login successfull")
-        navigate("/property")
+        // window.alert("Login successfull")
+        navigate("/")
       }).catch((err)=>{
           console.log(err)
           if(err.response.data === "User doesn't exists!"){

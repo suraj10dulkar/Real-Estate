@@ -1,5 +1,6 @@
 import React from "react";
 import { useState,useEffect} from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 import {debounce} from "lodash";
 import { BsSearch } from "react-icons/bs";
@@ -58,21 +59,22 @@ const Property = () =>{
             try{
                 const res = await axios({
                     method: 'get',
-                    url:"http://localhost:5000/user/property",
+                    url:"http://localhost:5000/property",
                     headers: {
                         Accept : "application/json",
                         authorization: token,
                         "Content-Type": "application/json"
-                      }, 
-                      credentials: "include"
+                      }
                 })
                 console.log(res)
             }catch(err){
                 console.log(err)
-                if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
-                    navigate("/")
-    
+                if(err){
+                    navigate("/login")
                 }
+                // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
+                //     navigate("/login")
+                // }
             
                 // console.log(err)
                 // console.log(err.response.data === "Unauthorized user")
