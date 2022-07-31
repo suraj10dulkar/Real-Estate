@@ -5,7 +5,6 @@ import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
 import Filebase64 from "react-file-base64";
 
-
 function GeneralInfo(){
     let navigate = useNavigate();
     const [data, setdata]=useState({

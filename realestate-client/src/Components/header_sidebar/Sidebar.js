@@ -12,7 +12,7 @@ const Sidebar = () =>{
             <div className='container'>
                <div className='sidebar'>
                 <div className='top_column'>
-                    <h1 className='logo'>Logo</h1>
+                    <h1 className='logo'>Real Estate</h1>
                     <div className='content_column'>
                     <div className='content_row'>
                         <MdOutlineOtherHouses className='home'/> <p className='home_text'>Property</p>
