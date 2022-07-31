@@ -1,5 +1,10 @@
 const mongoose = require("mongoose");
+const sequencingProperty = require("../config/sequencingProperty");
 const validator = require("validator");
+
+const random_number = Math.floor((Math.random()*100)+1);
+const arr=['Sold','Unsold']
+const random_string= arr[Math.floor(Math.random()*arr.length)];
 
 const userSchema = new mongoose.Schema({
     property_type:{
@@ -190,27 +195,46 @@ const userSchema = new mongoose.Schema({
         required:true
         
     },
-    ppd_id:{
-        type:String,
-        required:true
-        
-    },
     views:{
         type:Number,
-        required:true
+        required:true,
+        default:random_number
         
     },
     status:{
         type:String,
-        required:true
+        required:true,
+        default:random_string
         
     },
     days_left:{
         type:Number,
-        required:true
+        required:true,
+        default:random_number
         
     }
 
+});
+
+userSchema.pre("save", function (next) {
+    let doc = this;
+    sequencingProperty.getSequenceNextValue("user_id").
+    then(counter => {
+        console.log("asdasd", counter);
+        if(!counter) {
+            sequencingProperty.insertCounter("user_id")
+            .then(counter => {
+                doc._id = counter;
+                console.log(doc)
+                next();
+            })
+            .catch(error => next(error))
+        } else {
+            doc._id = counter;
+            next();
+        }
+    })
+    .catch(error => next(error))
 });
 
 const userModal = new mongoose.model('user',userSchema);

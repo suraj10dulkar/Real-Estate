@@ -1,31 +1,22 @@
 import React from 'react';
+import {HiOutlineUser} from "react-icons/hi";
+import { AiFillCaretDown } from "react-icons/ai";
 import "./Header.css"
 
 const Header = () =>{
-    return(
-        <>
-            <div className='container'>
-               <div className='sidebar'>
-                <div className='side'>
-                    <h1>Logo</h1>
-                    <div className='content'>
-                    <h2>Property</h2>
-                    <h2>Assitance</h2>
-                    <h2>Recieved Intrest</h2>
-                    <h2>Sent Intrest</h2>
-                    <h2>Property Views</h2>
-                    <h2>Traffic Plans</h2>
+        return(
+            <>
+                <div className='main_header'>
+                    <div className='header_row'>
+                        <span className='user_id_text'>USER ID :</span>
+                        <span className='user_id'>CDPPD021</span>
+                        <HiOutlineUser className='user_icon'/>  <span className='user_name'>manoranjan</span>
+                        <AiFillCaretDown className='drop_down'/>
                     </div>
+
                 </div>
-
-               </div>
-            </div>
-
-            <div className='header-main'>
-
-            </div>
-        </>
-    )
+                <hr className='line'></hr>
+            </>
+        )
 }
-
 export default Header;

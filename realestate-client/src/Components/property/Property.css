@@ -54,11 +54,15 @@
     margin-top: 5px;
     background-color: transparent;
 }
+.btn_add{
+    cursor: pointer;
+}
 .search_icon{
     font-size: 26px;
     color: #35b4fd;
     background-color: transparent;
     margin-left: 40px;
+    cursor: pointer;
 }
 .button_div{
     margin-left: 85%;
@@ -70,6 +74,7 @@
     border-radius: 55px;
     background-color: #65ace6;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    cursor: pointer;
 }
 
 .button_div button{

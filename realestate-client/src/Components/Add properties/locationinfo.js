@@ -2,6 +2,7 @@ import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
 import "./locationinfo.css"
 import Header from "../header_sidebar/Header";
+import Sidebar from "../header_sidebar/Sidebar";
 
 function LocationInfo(){
 
@@ -23,8 +24,8 @@ function LocationInfo(){
     
     return(
         <>
-        <hr></hr>
         <Header/>
+        <Sidebar/>
         <div className="main_section">
 
             <div className="heading_section">
