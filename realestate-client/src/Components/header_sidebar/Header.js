@@ -10,7 +10,7 @@ const Header = () =>{
                     <div className='header_row'>
                         <span className='user_id_text'>USER ID :</span>
                         <span className='user_id'>CDPPD021</span>
-                        <HiOutlineUser className='user_icon'/>  <span className='user_name'>manoranjan</span>
+                        <HiOutlineUser className='user_icon'/>  <span className='user_name'>rakesh</span>
                         <AiFillCaretDown className='drop_down'/>
                     </div>
 

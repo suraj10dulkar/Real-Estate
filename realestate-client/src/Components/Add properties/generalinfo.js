@@ -2,11 +2,8 @@ import React ,{ useState } from "react";
 import { Link } from "react-router-dom";
 import "./generalinfo.css"
 import Header from "../header_sidebar/Header";
-<<<<<<< HEAD
 import Sidebar from "../header_sidebar/Sidebar";
-=======
 import Filebase64 from "react-file-base64";
->>>>>>> main
 
 function GeneralInfo(){
 

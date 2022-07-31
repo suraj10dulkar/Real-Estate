@@ -34,9 +34,10 @@ body{
     margin-left: -40px;
 }
 .logo{
-    font-family:"Ebrima";
+    font-family:"Candara";
     margin-top: -15px;
     margin-bottom: 48px;
+    margin-left: -25px;
 }
 .content_row{
     display: flex;
