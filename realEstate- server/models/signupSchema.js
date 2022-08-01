@@ -4,6 +4,10 @@ const sequencing = require("../config/sequencing");
 
 const signupSchema = new mongoose.Schema({
     _id: Number,
+    username:{
+        type : String,
+        required:true
+    },
     email:{
         type:String,
         required:true,

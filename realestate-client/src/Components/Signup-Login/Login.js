@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useCookies } from 'react-cookie';
+import { useCookies, Cookies } from 'react-cookie';
 import axios from 'axios'
 import "./Login.css"
 
@@ -23,6 +23,9 @@ export default function Login() {
   }
 
   useEffect(() => {
+    const cookies = new Cookies()
+    console.log("Token in login => " + cookies.get('jwt'))
+
     const userLogin = ()=>{
       axios({
         method : 'post',
@@ -48,10 +51,12 @@ export default function Login() {
     }
     if(dataSent){
       userLogin()
+      console.log("Inside useEffect login function")
+
       setDataSent(false)
       // console.log( `This is cookie from useEffect => ${cookies}`)
     }
-    
+    console.log("Inside useEffect")
     
   }, [loginDetails, dataSent, navigate,cookies, setCookie])
   

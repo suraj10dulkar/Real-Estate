@@ -6,7 +6,6 @@ import Sidebar from "../header_sidebar/Sidebar";
 import Filebase64 from "react-file-base64";
 import { AiFillCamera } from "react-icons/ai";
 
-
 function GeneralInfo(){
     let navigate = useNavigate();
     const [data, setdata]=useState({

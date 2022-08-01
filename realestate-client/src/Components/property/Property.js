@@ -35,18 +35,38 @@ const Property = () =>{
 
     const onSearch = (searchTerm)=>{
         console.log(searchTerm);
+        const ppd_arr=searchTerm.split(" ");
+        console.log(ppd_arr);
+        const ppd_id=parseInt(ppd_arr[1]);
 
-            axios.get("http://localhost:5000/signupuser")
+
+            // axios.get("http://localhost:5000/property")
+             axios({
+                method: 'get',
+                url:"http://localhost:5000/property",
+                headers: {
+                    Accept : "application/json",
+                    authorization: token,
+                    "Content-Type": "application/json"
+                  }, 
+                  credentials: "include"
+            })
             .then(res=>{
                 let post =res.data.property;
-                console.log(post);
-                const result= post.filter((val)=>val.email===(searchTerm));
-                console.log(...result);
-
+                //console.log(post);
+                const result= post.filter((val)=>val._id===ppd_id);
+                
+                //console.log(res);
+               
                 setUsers(result);
-                console.log(users);
+                if(result.length===0)
+                {
+                    window.alert(`Oops! Please provide the correct "PPD ID".`)
+                }
+               
 
             }).catch(err=>{
+                
                 console.log(err)
             })
        
@@ -54,18 +74,32 @@ const Property = () =>{
 
     
     useEffect(()=>{
-        const afterLogin = async ()=>{
-            try{
-                const res = await axios({
+        const afterLogin = ()=>{
+            console.log("Inside afterLogin function property.js useEffect")
+
+                axios({
                     method: 'get',
                     url:"http://localhost:5000/property",
                     headers: {
                         Accept : "application/json",
                         authorization: token,
                         "Content-Type": "application/json"
-                      }
+                      }, 
+                      credentials: "include"
+                }).then((res)=>{
+                    console.log(res.data.property)
+                    setUsers(res.data.property)
+                }).catch((err)=>{
+                    console.log(err)
+                    if(err){
+                        navigate("/login")
+                    }
+                    // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
+                    //         navigate("/login")
+                    // }
                 })
-                console.log(res)
+
+                setUsers(res.data.property)
             }catch(err){
                 console.log(err)
                 if(err){
@@ -78,25 +112,15 @@ const Property = () =>{
                 // console.log(err)
                 // console.log(err.response.data === "Unauthorized user")
     
+
             }
-        }
+               
+                
+    
+                afterLogin()
+        },[token, navigate,value])
 
-        afterLogin()
-        
-        
-        // console.log(`Cookie from property page => ${token}`)
-        //axios.get("https://instaclone-10x-app.herokuapp.com/user")
-        // axios.get("http://localhost:5000/signupuser")
-        // .then(res=>{
-        //     setUsers(res.data.property)
-        //     console.log(res.data)
-        //     // console.log(res.data.property.email)
-
-        // }).catch(err=>{
-        //     console.log(err)
-        // })
-    },[token, navigate])
-    // value,
+    
     return(
         <>
             {/* <hr></hr> */}
@@ -107,7 +131,7 @@ const Property = () =>{
                     <table className="elementsContainer">
                         <tr>
                             <td>
-                                     <input type="text" placeholder="Search PPD ID" className="search" name="searchtext" onChange={onChange}/>
+                                     <input type="text" placeholder="Search PPD ID (e.g. PPD 0000)" className="search" name="searchtext" onChange={onChange}/>
                             </td>
                             
                             <td><span className="stand">|</span></td>
@@ -119,10 +143,10 @@ const Property = () =>{
                     </table>
                 </div>
             </div>
-            <Link to="/basicinfo"> <div className="button_div">
-            <button className="btn_add"><span className="plus">+</span><span className="text_btn">Add Property</span></button>          
+            <div className="button_div">
+            <Link to="/basicinfo"> <button className="btn_add"><span className="plus">+</span><span className="text_btn">Add Property</span></button>  </Link>        
             </div>
-            </Link>
+            
             <div className="main_row">
                 <p className="head_column_one">PPDID</p>
                 <p className="head_column_two">Image</p>
@@ -138,14 +162,14 @@ const Property = () =>{
             {[...users].map((user)=>{
                 return(
                     <div className="property_row">
-                    <p className="property_column_one">PPD1234</p>
+                    <p className="property_column_one">PPD {user._id}</p>
                     <p className="property_column_two"><FaImages className="image"/></p>
-                    <p className="property_column_three">Plot</p>
-                    <p className="property_column_four">8748959678</p>
-                    <p className="property_column_five">1290</p>
-                    <p className="property_column_six">03</p>
-                    <p className="property_column_seven"><button className="btn">Sold</button></p>
-                    <p className="property_column_eight">10</p>
+                    <p className="property_column_three">{user.property_type}</p>
+                    <p className="property_column_four">{user.mobile}</p>
+                    <p className="property_column_five">{user.total_area}</p>
+                    <p className="property_column_six">{user.views}</p>
+                    <p className="property_column_seven"><button className="btn">{user.status}</button></p>
+                    <p className="property_column_eight">{user.days_left}</p>
                     <p className="property_column_nine"><BiShow className="show"/><BiPencil className="edit"/></p>
                 </div>
                 )

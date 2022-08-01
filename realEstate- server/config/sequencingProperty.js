@@ -11,7 +11,7 @@ const SequenceSchema = new mongoose.Schema({
     }
 });
 
-const PropertyCounter = mongoose.model('propertyCounter', SequenceSchema);
+const PropertyCounter = mongoose.model('PropertyCounter', SequenceSchema);
 
 const getSequenceNextValue = (seqName) => {
     return new Promise((resolve, reject) => {
