@@ -35,6 +35,10 @@ const Property = () =>{
 
     const onSearch = (searchTerm)=>{
         console.log(searchTerm);
+        const ppd_arr=searchTerm.split(" ");
+        console.log(ppd_arr);
+        const ppd_id=parseInt(ppd_arr[1]);
+
 
             // axios.get("http://localhost:5000/property")
              axios({
@@ -49,14 +53,20 @@ const Property = () =>{
             })
             .then(res=>{
                 let post =res.data.property;
-                console.log(post);
-                const result= post.filter((val)=>val._id===parseInt(searchTerm));
-                console.log(...result);
-                console.log(res);
+                //console.log(post);
+                const result= post.filter((val)=>val._id===ppd_id);
+                
+                //console.log(res);
+               
                 setUsers(result);
-                console.log(users);
+                if(result.length===0)
+                {
+                    window.alert(`Oops! Please provide the correct "PPD ID".`)
+                }
+               
 
             }).catch(err=>{
+                
                 console.log(err)
             })
        
@@ -75,7 +85,7 @@ const Property = () =>{
                         "Content-Type": "application/json"
                       }
                 })
-                console.log(res.data.property)
+               // console.log(res.data.property)
                 setUsers(res.data.property)
             }catch(err){
                 console.log(err)
@@ -118,7 +128,7 @@ const Property = () =>{
                     <table className="elementsContainer">
                         <tr>
                             <td>
-                                     <input type="text" placeholder="Search PPD ID" className="search" name="searchtext" onChange={onChange}/>
+                                     <input type="text" placeholder="Search PPD ID (e.g. PPD 0000)" className="search" name="searchtext" onChange={onChange}/>
                             </td>
                             
                             <td><span className="stand">|</span></td>
@@ -149,7 +159,7 @@ const Property = () =>{
             {[...users].map((user)=>{
                 return(
                     <div className="property_row">
-                    <p className="property_column_one">PPD{user._id}</p>
+                    <p className="property_column_one">PPD {user._id}</p>
                     <p className="property_column_two"><FaImages className="image"/></p>
                     <p className="property_column_three">{user.property_type}</p>
                     <p className="property_column_four">{user.mobile}</p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BsBell,BsTag } from "react-icons/bs";
 import { MdOutlineOtherHouses } from "react-icons/md";
 import { TbEye,TbArrowBarUp,TbArrowBarToDown } from "react-icons/tb";
@@ -14,8 +15,8 @@ const Sidebar = () =>{
                 <div className='top_column'>
                     <h1 className='logo'>Real Estate</h1>
                     <div className='content_column'>
-                    <div className='content_row'>
-                        <MdOutlineOtherHouses className='home'/> <p className='home_text'>Property</p>
+                     <div className='content_row'>
+                       <MdOutlineOtherHouses className='home'/> <Link to="/" style={{textDecoration:'none'}}><p className='home_text'>Property</p></Link>
                     </div>
                     <div className='content_row'>
                         <BsBell className='bell' /> <p className='bell_text'>Assitance</p>
