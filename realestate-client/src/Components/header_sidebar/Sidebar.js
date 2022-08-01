@@ -18,13 +18,13 @@ const Sidebar = () =>{
                         <MdOutlineOtherHouses className='home'/> <p className='home_text'>Property</p>
                     </div>
                     <div className='content_row'>
-                        <BsBell className='bell' /> <p className='bell_text'>Assitance</p>
+                        <BsBell className='bell' /> <p className='bell_text'>Asssitance</p>
                     </div>
                     <div className='content_row'>
-                        <TbArrowBarToDown className='down'/>  <p className='down_text'>Recieved Intrest</p>
+                        <TbArrowBarToDown className='down'/>  <p className='down_text'>Received Interest</p>
                     </div>
                     <div className='content_row'>
-                         <TbArrowBarUp className='up'/> <p className='up_text'>Sent Intrest</p> 
+                         <TbArrowBarUp className='up'/> <p className='up_text'>Sent Interest</p> 
                     </div>
                     <div className='content_row'>
                          <TbEye className='eye'/>  <p className='eye_text'>Property Views</p> 
