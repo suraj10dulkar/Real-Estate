@@ -50,7 +50,7 @@ const Property = () =>{
             .then(res=>{
                 let post =res.data.property;
                 console.log(post);
-                const result= post.filter((val)=>val.total_area===(searchTerm));
+                const result= post.filter((val)=>val._id===parseInt(searchTerm));
                 console.log(...result);
                 console.log(res);
                 setUsers(result);

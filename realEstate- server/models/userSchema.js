@@ -10,6 +10,7 @@ const random_string= arr[Math.floor(Math.random()*arr.length)];
 const userSchema = new mongoose.Schema({
     // BASIC INFO
     //-----------------------------------------------
+    _id: Number,
     property_type:{
         type:String,
         required:true

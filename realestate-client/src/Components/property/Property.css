@@ -208,7 +208,7 @@
 /* property column style */
 .property_column_one{
     margin-left: 40px;
-    margin-right: 25px;
+    margin-right: 12px;
     height: auto;
     width: auto;
     border: none;
@@ -218,7 +218,7 @@
 }
 .property_column_two{
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 43px;
     height: auto;
     width: auto;
     border: none;
@@ -242,7 +242,7 @@
 }
 .property_column_four{
     margin-left: 30px;
-    margin-right: 40px;
+    margin-right: 35px;
     height: auto;
     width: auto;
     border: none;
@@ -252,7 +252,7 @@
 }
 .property_column_five{
     margin-left: 20px;
-    margin-right: 35px;
+    margin-right: 26px;
     height: auto;
     width: auto;
     border: none;
@@ -294,7 +294,7 @@
 }
 .property_column_eight{
     margin-left: 40px;
-    margin-right: 45px;
+    margin-right: 35px;
     height: auto;
     width: auto;
     border: none;
