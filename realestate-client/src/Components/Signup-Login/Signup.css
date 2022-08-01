@@ -54,9 +54,13 @@ input{
     width: 20vw;
     border-radius: 0.3rem;
 }
+#S-username{
+    margin-top: 3rem;
+    text-align: start;
+    border: 2px solid #e5e1e1;
+}
 
 #S-userid{
-    margin-top: 3rem;
     text-align: start;
     border: 2px solid #e5e1e1;
 }
