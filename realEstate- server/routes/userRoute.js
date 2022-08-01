@@ -16,7 +16,7 @@ router.post("/addproperty", async(req,res)=>{
     }
 });
 
-router.get("/property",Authenticate, async (req,res)=>{
+router.get("/property", Authenticate, async (req,res)=>{
     
     
     // console.log(`This is cookie from backend ${req.headers.authorization}`)
@@ -24,7 +24,7 @@ router.get("/property",Authenticate, async (req,res)=>{
     try{
         const propertyData = await userModal.find();
         res.status(200).send({property:propertyData});
-        console.log(propertyData);
+        // console.log(propertyData);
     }
     catch(e){
         res.status(400).send(e);

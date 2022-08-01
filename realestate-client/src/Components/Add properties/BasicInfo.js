@@ -68,7 +68,6 @@ function BasicInfo(){
 
             <select name="pro" className="select"  onChange={e=>setdata({...data,property_type: e.target.value})} >
                 <option value="" selected={true} disabled>Not selected yet</option>
-
                 <option value="Plot">Plot</option>
                 <option value="House">House</option>
                 <option value="Land">Land</option>
@@ -101,9 +100,7 @@ function BasicInfo(){
             <lable htmlFor="ownership" id="ownership">Ownership</lable>
             <div>
             <select name="ownership" className="select4" onChange={e=>setdata({...data,ownership: e.target.value})}>
-
                 <option value="" selected={true} disabled>Not selected yet</option>
-
                 <option value="Self Owned">Self Owned</option>
                 <option value="Rented">Rented</option>
                 <option value="Family Owned">Family Owned</option>
@@ -117,10 +114,8 @@ function BasicInfo(){
             <lable htmlFor="propertyage" id="propertyage">Propert Age</lable>
             <div>
             <select name="propertyage" className="select5" onChange={e=>setdata({...data,property_age: e.target.value})}>
-
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="old">Old</option>
-
                 <option value="Intermediate">Intermediate</option>
                 <option value="new">New</option>
             </select>

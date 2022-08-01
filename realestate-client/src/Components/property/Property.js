@@ -64,50 +64,39 @@ const Property = () =>{
 
     
     useEffect(()=>{
-        const afterLogin = async ()=>{
-            try{
-                const res = await axios({
+        const afterLogin = ()=>{
+            console.log("Inside afterLogin function property.js useEffect")
+
+                axios({
                     method: 'get',
                     url:"http://localhost:5000/property",
                     headers: {
                         Accept : "application/json",
                         authorization: token,
                         "Content-Type": "application/json"
-                      }
+                      }, 
+                      credentials: "include"
+                }).then((res)=>{
+                    console.log(res.data.property)
+                    setUsers(res.data.property)
+                }).catch((err)=>{
+                    console.log(err)
+                    if(err){
+                        navigate("/login")
+                    }
+                    // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
+                    //         navigate("/login")
+                    // }
                 })
-                console.log(res.data.property)
-                setUsers(res.data.property)
-            }catch(err){
-                console.log(err)
-                if(err){
-                    navigate("/login")
-                }
-                // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
-                //     navigate("/login")
-                // }
-            
-                // console.log(err)
-                // console.log(err.response.data === "Unauthorized user")
-    
+                
             }
-        }
+               
+                
+    
+                afterLogin()
+        },[token, navigate,value])
 
-        afterLogin()
-        
-        
-        // console.log(`Cookie from property page => ${token}`)
-        //axios.get("https://instaclone-10x-app.herokuapp.com/user")
-        // axios.get("http://localhost:5000/signupuser")
-        // .then(res=>{
-        //     setUsers(res.data.property)
-        //     console.log(res.data)
-        //     // console.log(res.data.property.email)
-
-        // }).catch(err=>{
-        //     console.log(err)
-        // })
-    },[token, navigate,value])
-    // value,
+    
     return(
         <>
             {/* <hr></hr> */}

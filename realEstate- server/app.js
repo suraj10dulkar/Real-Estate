@@ -32,9 +32,9 @@ app.listen(port, (err)=>{
 })
 
 
-// app.get("/", (req, res)=>{
-//     res.status(200).send("Realestate Backend server zw")
-// })
+app.get("/", (req, res)=>{
+    res.status(200).send("Realestate Backend server zw")
+})
 
 app.use(userController);
 app.use(signupLoginController);
