@@ -2,7 +2,7 @@
     width: 90%;
     margin-left: 6%;
     border-radius: 10px;
-    height: 550px;
+    height: 580px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -12,29 +12,33 @@
     margin-left: 5%;
     margin-top: 3%;
     font-weight: bold;
+    padding-top: 4%;
+    color: grey;
 }
 
 .email{
-    width: 420px;
+    width: 450px;
     height: 26px;
-    border-radius: 10px solid gray;
-    font-weight: bold;
-    font-size: large;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .add{
-    width: 420px;
+    width: 450px;
     height: 26px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .address{
-    margin-left: 8%;
-    margin-top: 0.5%;
+    margin-left: 2%;
+    margin-top: 0%;
 }
 
 .box13{
@@ -42,15 +46,17 @@
     margin-left: 5%;
     margin-top: 3%;
     font-weight: bold;
+    color: grey;
 }
 
 .select14{
     width: 450px;
     height: 50px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: large;
+    font-weight: 500;
+    font-size: 16px;
     color: grey;
+    border: 1px solid  rgb(130, 158, 122);
 }
 
 .select15{

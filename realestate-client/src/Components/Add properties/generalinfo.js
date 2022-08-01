@@ -64,7 +64,7 @@ function GeneralInfo(){
 
             <div className="box9">
             <div className="name">
-            <lable for="name" id="name">Ownership</lable>
+            <lable for="name" id="name">Name</lable>
             <div>
             <select name="name" className="select9" onChange={e=>setdata({...data,name: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
@@ -144,6 +144,7 @@ function GeneralInfo(){
                 
                 </div>
             </div>
+
 
             <Link to="/propertydeatils"><button className="prev2">Previous</button></Link>
             <button className="save2" type="submit">Save & Continue</button>

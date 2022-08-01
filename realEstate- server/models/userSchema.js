@@ -2,13 +2,15 @@ const mongoose = require("mongoose");
 const sequencingProperty = require("../config/sequencingProperty");
 const validator = require("validator");
 
-const random_number = Math.floor((Math.random()*100)+1);
+const random_views = Math.floor((Math.random()*100)+1);
+const random_days = Math.floor((Math.random()*100)+1);
 const arr=['Sold','Unsold']
 const random_string= arr[Math.floor(Math.random()*arr.length)];
 
 const userSchema = new mongoose.Schema({
     // BASIC INFO
     //-----------------------------------------------
+    _id: Number,
     property_type:{
         type:String,
         required:true
@@ -196,14 +198,9 @@ const userSchema = new mongoose.Schema({
         required:true
         
     },
-
-    ppd_id:{
-        type:String
-        
-    },
     views:{
         type:Number,
-        default:random_number
+        default:random_views
         
     },
     status:{
@@ -213,7 +210,8 @@ const userSchema = new mongoose.Schema({
     },
     days_left:{
         type:Number,
-        default:random_number  
+        default:random_days
+        
     }
 
 });
