@@ -2,10 +2,18 @@ const mongoose = require("mongoose");
 const sequencingProperty = require("../config/sequencingProperty");
 const validator = require("validator");
 
-const random_views = Math.floor((Math.random()*100)+1);
-const random_days = Math.floor((Math.random()*100)+1);
-const arr=['Sold','Unsold']
-const random_string= arr[Math.floor(Math.random()*arr.length)];
+// const random_views = Math.floor((Math.random()*100)+1);
+// let random_days;
+// const arr=['Sold','Unsold']
+// const random_string= arr[Math.floor(Math.random()*arr.length)];
+// if(random_string==="Sold")
+// {
+//     random_days=0;
+// }
+// else if(random_string==="Unsold")
+// {
+//     random_days = Math.floor((Math.random()*100)+1);
+// }
 
 const userSchema = new mongoose.Schema({
     // BASIC INFO
@@ -173,7 +181,7 @@ const userSchema = new mongoose.Schema({
         
     },
     pincode:{
-        type:String,
+        type:Number,
         required:true,
         min:6
         
@@ -189,28 +197,28 @@ const userSchema = new mongoose.Schema({
         
     },
     latitude:{
-        type:String,
+        type:Number,
         required:true
         
     },
     longitude:{
-        type:String,
+        type:Number,
         required:true
         
     },
     views:{
         type:Number,
-        default:random_views
+        // default:random_views
         
     },
     status:{
         type:String,
-        default:random_string
+        // default:random_string
         
     },
     days_left:{
         type:Number,
-        default:random_days
+        // default:random_days
         
     }
 

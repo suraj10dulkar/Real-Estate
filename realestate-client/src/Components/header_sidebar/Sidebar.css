@@ -49,12 +49,18 @@ body{
     font-size: 1.6rem;
     color:#4c67fe;
     margin-top: -3px;
+    cursor: pointer;
 }
+
 .home_text{
     font-size: 1.4rem;
     color: #4c67fe;
     margin-top: -3px;
     font-family:"Calibri";
+    cursor: pointer;
+}
+.home_text:active{
+    color:red;
 }
 .bell{
     margin-right: 28px;
