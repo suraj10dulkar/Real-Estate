@@ -7,7 +7,8 @@ import PropertyDetails from "./Components/Add properties/propertyDetails"
 import GeneralInfo from "./Components/Add properties/generalinfo";
 import LocationInfo from "./Components/Add properties/locationinfo";
 import Property from "./Components/property/Property";
-
+import Protected from "./Components/Protected/protected";
+import Error404 from "./Components/404 Error/Error404";
 
 function App() {
   return (
@@ -17,10 +18,12 @@ function App() {
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/signup" element={<Signup></Signup>}></Route>
       <Route path="/" element={<Property></Property>}></Route>
-      <Route path="/basicinfo" element={<BasicInfo></BasicInfo>}></Route>
-      <Route path="/propertydeatils" element={<PropertyDetails></PropertyDetails>}></Route>
-      <Route path="/generalinfo" element={<GeneralInfo></GeneralInfo>}></Route>
-      <Route path="/locationinfo" element={<LocationInfo></LocationInfo>}></Route>
+      <Route path="/basicinfo" element={<Protected><BasicInfo/></Protected>}></Route>
+      <Route path="/propertydeatils" element={<Protected><PropertyDetails/></Protected>}></Route>
+      <Route path="/generalinfo" element={<Protected><GeneralInfo/></Protected>}></Route>
+      <Route path="/locationinfo" element={<Protected><LocationInfo/></Protected>}></Route>
+      <Route path="*" element={<Error404/>}></Route>
+      <Route path="/error" element={<Error404/>}></Route>
 
     </Routes>
     
