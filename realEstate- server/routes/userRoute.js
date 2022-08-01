@@ -24,11 +24,7 @@ router.get("/property", Authenticate, async (req,res)=>{
     try{
         const propertyData = await userModal.find();
         res.status(200).send({property:propertyData});
-<<<<<<< HEAD
-        //console.log(propertyData);
-=======
-        // console.log(propertyData);
->>>>>>> main
+
     }
     catch(e){
         res.status(400).send(e);
