@@ -4,8 +4,10 @@ import "./BasicInfo.css";
 import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
 
+
 function BasicInfo(){
     let navigate = useNavigate();
+    
     const [data, setdata]=useState({
         property_type:"",
         negotiable:"",
@@ -82,7 +84,7 @@ function BasicInfo(){
             <select name="nego" className="select1"  onChange={e=>setdata({...data,negotiable: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Not Negotiable">Not Negotiable</option>
-                <option value="Nogtiable">Nogtiable</option>
+                <option value="Nogtiable">Negotiable</option>
             </select>
             </div>
             </div>
@@ -148,7 +150,7 @@ function BasicInfo(){
             <select name="BankLoan" className="select8"  onChange={e=>setdata({...data,bank_loan: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option> 
                 <option value="Bank Loan">Bank Loan</option>
-                <option value="No Bank Loan">Bank Laon not Taken</option>
+                <option value="No Bank Loan">Bank Loan not Taken</option>
             </select>
             </div>
             </div>
@@ -156,7 +158,7 @@ function BasicInfo(){
             </div>
             
             
-            <Link to=""><button className="cancel">Cancel</button></Link>
+            <Link to="/"><button className="cancel">Cancel</button></Link>
             <button className="save2" type="submit">Save & Continue</button>
         </form>
         </div>
