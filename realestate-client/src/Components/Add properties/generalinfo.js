@@ -70,7 +70,7 @@ function GeneralInfo(){
             <select name="name" className="select9" onChange={e=>setdata({...data,name: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Owner">Owner</option>
-                <option value="Self">Sellf</option>
+                <option value="Self">Self</option>
                 <option value="Family Member">Family Member</option>
             </select>
             </div>
@@ -79,7 +79,7 @@ function GeneralInfo(){
             <div className="mob">
                 <label for="mobile">Mobile</label>
                 <div>
-                    <input className="mobile" placeholder="Enter Mobile Number" onChange={e=>setdata({...data,mobile: e.target.value})}></input>
+                    <input className="mobile" placeholder="Enter Mobile Number" minlength="10" maxLength="10" onChange={e=>setdata({...data,mobile: e.target.value})}></input>
                 </div>
             </div>
             </div>
@@ -90,7 +90,7 @@ function GeneralInfo(){
             <div>
             <select name="post" className="select10" onChange={e=>setdata({...data,posted_by: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
-                <option value="Self">Sellf</option>
+                <option value="Self">Self</option>
                 <option value="Family Member">Family Member</option>
             </select>
             </div>
