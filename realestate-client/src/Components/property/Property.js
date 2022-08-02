@@ -68,7 +68,6 @@ const Property = () =>{
                
 
             }).catch(err=>{
-                
                 console.log(err)
             })
        
