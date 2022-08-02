@@ -8,6 +8,7 @@ import { AiFillCamera } from "react-icons/ai";
 
 function GeneralInfo(){
     let navigate = useNavigate();
+    const [name,setName]=useState(true);
     const [data, setdata]=useState({
         name:"",
         mobile:"",
@@ -139,10 +140,11 @@ function GeneralInfo(){
                         id="fileimage"
                         type="file"
                         multiple={false}
-                        onDone={({base64}) => setdata({ ...data,image: base64 })}
+                        onDone={({base64}) => {setdata({ ...data,image: base64 });setName(!name)}}
                         title="Add File"
+                        
                 />
-                <div className="addphoto"><h4>Add Photo</h4></div>
+               {name?<div className="addphoto"><span className="image_name" >Add Photo</span></div>:null} 
             </div>
          </div>
             

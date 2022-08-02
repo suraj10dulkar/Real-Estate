@@ -104,7 +104,7 @@ const Property = () =>{
                     }
                 })
 
-            }                
+        }
     
             afterLogin()
         },[token, navigate,value])
@@ -154,7 +154,7 @@ const Property = () =>{
                 return(
                     <div key={i} className="property_row">
                     <p className="property_column_one">PPD {user._id}</p>
-                    <p className="property_column_two"><FaImages className="image"/></p>
+                    <p className="property_column_two"><FaImages className="image" /></p>
                     <p className="property_column_three">{user.property_type}</p>
                     <p className="property_column_four">{user.mobile}</p>
                     <p className="property_column_five">{user.total_area}</p>
