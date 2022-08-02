@@ -1,10 +1,12 @@
 import React from 'react';
+import {useState} from 'react';
 import {HiOutlineUser} from "react-icons/hi";
 import { AiFillCaretDown } from "react-icons/ai";
 import Logout from '../Logout/Logout';
 import "./Header.css"
 
 const Header = () =>{
+        const [show, setShow] = useState(false)
 
         return(
             <>
@@ -13,7 +15,11 @@ const Header = () =>{
                         <span className='user_id_text'>USER ID :</span>
                         <span className='user_id'>CDPPD021</span>
                         <HiOutlineUser className='user_icon'/>  <span className='user_name'>rakesh</span>
-                        <AiFillCaretDown  className='drop_down'></AiFillCaretDown><Logout/>    
+                        
+                        <AiFillCaretDown  className='drop_down' onClick={()=>{setShow(!show)}}/>
+                        {show?<Logout/>:null}
+                        {/* <Logout /> */}
+                            
                     </div>
                     
 

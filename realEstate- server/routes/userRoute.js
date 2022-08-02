@@ -21,6 +21,7 @@ router.get("/property", Authenticate, async (req,res)=>{
     
     // console.log(`This is cookie from backend ${req.headers.authorization}`)
     // console.log(`This is cookie-parser ${req.cookies.jwt}`)
+    
     try{
         const propertyData = await userModal.find();
         res.status(200).send({property:propertyData});
