@@ -98,26 +98,11 @@ const Property = () =>{
                     //         navigate("/login")
                     // }
                 })
-
-                setUsers(res.data.property)
-            }catch(err){
-                console.log(err)
-                if(err){
-                    navigate("/login")
-                }
-                // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
-                //     navigate("/login")
-                // }
-            
-                // console.log(err)
-                // console.log(err.response.data === "Unauthorized user")
     
 
             }
-               
-                
-    
-                afterLogin()
+            afterLogin()
+
         },[token, navigate,value])
 
     
@@ -159,9 +144,9 @@ const Property = () =>{
                 <p className="head_column_nine">Action</p>
             </div>
 
-            {[...users].map((user)=>{
+            {[...users].map((user, i)=>{
                 return(
-                    <div className="property_row">
+                    <div key={i} className="property_row">
                     <p className="property_column_one">PPD {user._id}</p>
                     <p className="property_column_two"><FaImages className="image"/></p>
                     <p className="property_column_three">{user.property_type}</p>
