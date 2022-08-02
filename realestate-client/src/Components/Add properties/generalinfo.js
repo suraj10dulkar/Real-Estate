@@ -4,6 +4,7 @@ import "./generalinfo.css"
 import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
 import Filebase64 from "react-file-base64";
+import { AiFillCamera } from "react-icons/ai";
 
 function GeneralInfo(){
     let navigate = useNavigate();
@@ -130,23 +131,24 @@ function GeneralInfo(){
             </div>
             </div>
             </div>
-            
-            <div className="image">
-                <label for="image"></label>
-                {/* <div><label for="upload">#</label> */}
-                <div className="upload_box">
+
+         <div className="container-image">
+            < AiFillCamera className="imageicon"/>
+            <div className="input-file">
                 <Filebase64
-                        id="upload"
+                        id="fileimage"
                         type="file"
                         multiple={false}
                         onDone={({base64}) => setdata({ ...data,image: base64 })}
+                        title="Add File"
                 />
-                
-                </div>
+                <div className="addphoto"><h4>Add Photo</h4></div>
             </div>
+         </div>
+            
 
 
-            <Link to="/propertydeatils"><button className="prev2">Previous</button></Link>
+            <Link to="/propertydeatils"><button className="cancel">Previous</button></Link>
             <button className="save2" type="submit">Save & Continue</button>
                 
 

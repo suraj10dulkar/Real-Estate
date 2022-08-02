@@ -100,11 +100,16 @@ const Property = () =>{
                     //         navigate("/login")
                     // }
                 })
+<<<<<<< HEAD
                // console.log(res.data.property)
                 // setUsers(res.data.property)
             }
                
                 
+=======
+
+            }                
+>>>>>>> main
     
                 afterLogin()
         },[token, navigate,value])

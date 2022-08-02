@@ -216,8 +216,8 @@ else if(random_string==="Unsold")
                 </div>
         </div>
         </div>
-        <Link to="/generalinfo"><button className="prev3">Previous</button></Link>
-        <button className="save2" type="submit">ADD PROPERTY</button>
+        <Link to="/generalinfo"><button className="cancel">Previous</button></Link>
+        <button className="save2" type="submit">Add Property</button>
         </form>
 
         
