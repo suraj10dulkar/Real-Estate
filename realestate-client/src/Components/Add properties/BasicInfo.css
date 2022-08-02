@@ -230,6 +230,13 @@ hr{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     border: 0px;
 }
+.cancel:hover{
+    background-color: rgb(8, 81, 126);
+    cursor: pointer;
+}
+.cancel:active{
+    color: red;
+}
 
 .save2{
     border-radius: 4em / 4em;

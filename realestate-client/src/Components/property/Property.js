@@ -12,6 +12,7 @@ import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
 import './Property.css'
 
+
 const Property = () =>{
     const [value,setValue]= useState("");
     const [users,setUsers]= useState([]);
@@ -100,16 +101,8 @@ const Property = () =>{
                     //         navigate("/login")
                     // }
                 })
-<<<<<<< HEAD
-               // console.log(res.data.property)
-                // setUsers(res.data.property)
-            }
-               
-                
-=======
 
-            }                
->>>>>>> main
+        }
     
                 afterLogin()
         },[token, navigate,value])
@@ -157,7 +150,7 @@ const Property = () =>{
                 return(
                     <div className="property_row">
                     <p className="property_column_one">PPD {user._id}</p>
-                    <p className="property_column_two"><FaImages className="image"/></p>
+                    <p className="property_column_two"><FaImages className="image" /></p>
                     <p className="property_column_three">{user.property_type}</p>
                     <p className="property_column_four">{user.mobile}</p>
                     <p className="property_column_five">{user.total_area}</p>
