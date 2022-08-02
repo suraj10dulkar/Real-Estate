@@ -99,23 +99,7 @@ const Property = () =>{
                     // }
                 })
 
-                setUsers(res.data.property)
-            }catch(err){
-                console.log(err)
-                if(err){
-                    navigate("/login")
-                }
-                // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
-                //     navigate("/login")
-                // }
-            
-                // console.log(err)
-                // console.log(err.response.data === "Unauthorized user")
-    
-
-            }
-               
-                
+            }                
     
                 afterLogin()
         },[token, navigate,value])
