@@ -22,7 +22,7 @@
     color: gray;
 }
 .user_id{
-    margin-right: 62%;
+    margin-right: 59%;
     font-size: 1.5rem;
     margin-top: -8px;
     font-family: "Calibri";
@@ -47,6 +47,13 @@
 .drop_down{
     margin-top: -2px;
     font-size: 20px;
+}
+.drop_down:hover{
+    color: rgb(255, 106, 0);
+    cursor: pointer;
+}
+.drop_down:active{
+    color: rgb(0, 17, 255);
 }
 .line{
     border: 2px solid #d4ece8;
