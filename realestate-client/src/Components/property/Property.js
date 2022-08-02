@@ -16,6 +16,7 @@ import './Property.css'
 const Property = () =>{
     const [value,setValue]= useState("");
     const [users,setUsers]= useState([]);
+    // const [userName_id, setUserName_id] = useState({})
     const cookies = new Cookies()
     const token = cookies.get('jwt')
     let navigate = useNavigate();
@@ -69,7 +70,6 @@ const Property = () =>{
                
 
             }).catch(err=>{
-                
                 console.log(err)
             })
        
@@ -79,7 +79,6 @@ const Property = () =>{
     useEffect(()=>{
         const afterLogin = ()=>{
             console.log("Inside afterLogin function property.js useEffect")
-
                 axios({
                     method: 'get',
                     url:"http://localhost:5000/property",
@@ -90,28 +89,33 @@ const Property = () =>{
                       }, 
                       credentials: "include"
                 }).then((res)=>{
-                    console.log(res.data.property)
+                    console.log("Inside then block of property.js")
+                    // console.log(res.data.userData[0]._id)
+                    // console.log(res.data.property)
                     setUsers(res.data.property)
                 }).catch((err)=>{
+                    console.log("Inside catch block of property.js")
                     console.log(err)
-                    if(err){
-                        navigate("/login")
-                    }
-                    // if(err.response.data === "Unauthorized user" || err.response.data === undefined || err.response.status === 409){
-                    //         navigate("/login")
+                    // if(err){
+                    //     navigate("/login")
                     // }
+                    if(err.response.data === "Unauthorized user" || err.response.status === 409 ){
+                            navigate("/login")
+                    }
                 })
 
         }
     
-                afterLogin()
+            afterLogin()
         },[token, navigate,value])
 
     
     return(
         <>
             {/* <hr></hr> */}
+            {/* <Username_id.Provider value={userName_id}> */}
                 <Header/>
+            {/* </Username_id.Provider> */}
                 <Sidebar/>
             <div className="row_search_bar">
                 <div className="boxContainer">
@@ -146,9 +150,9 @@ const Property = () =>{
                 <p className="head_column_nine">Action</p>
             </div>
 
-            {[...users].map((user)=>{
+            {[...users].map((user, i)=>{
                 return(
-                    <div className="property_row">
+                    <div key={i} className="property_row">
                     <p className="property_column_one">PPD {user._id}</p>
                     <p className="property_column_two"><FaImages className="image" /></p>
                     <p className="property_column_three">{user.property_type}</p>

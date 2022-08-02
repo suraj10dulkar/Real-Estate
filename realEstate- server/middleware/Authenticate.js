@@ -10,7 +10,8 @@ const Authenticate = async(req, res, next)=>{
             // console.log(verifyToken)
 
             if(userDetail.length){
-                // console.log(userDetail)
+                // res.status(205).send( userDetail)
+                console.log(userDetail)
                 next()
             }else{
                 res.status(409).send("User not found")
