@@ -26,6 +26,7 @@ function BasicInfo(){
         localStorage.setItem('BASIC_INFO', JSON.stringify(data));
         navigate("/propertydeatils")
     }
+   
 
     
     return(
@@ -66,7 +67,7 @@ function BasicInfo(){
             <lable htmlFor="pro" id="pro">Property Type</lable>
             <div>
 
-            <select name="pro" className="select"  onChange={e=>setdata({...data,property_type: e.target.value})} >
+            <select name="pro" className="select"   onChange={e=>setdata({...data,property_type: e.target.value})} >
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Plot">Plot</option>
                 <option value="House">House</option>
@@ -78,7 +79,7 @@ function BasicInfo(){
             <div className="negotableSelect">
             <lable htmlFor="nego" id="nego">Negotiable</lable>
             <div>
-            <select name="nego" className="select1" onChange={e=>setdata({...data,negotiable: e.target.value})}>
+            <select name="nego" className="select1"  onChange={e=>setdata({...data,negotiable: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Not Negotiable">Not Negotiable</option>
                 <option value="Nogtiable">Nogtiable</option>
@@ -99,7 +100,7 @@ function BasicInfo(){
             <div className="ownershipSelect">
             <lable htmlFor="ownership" id="ownership">Ownership</lable>
             <div>
-            <select name="ownership" className="select4" onChange={e=>setdata({...data,ownership: e.target.value})}>
+            <select name="ownership" className="select4"  onChange={e=>setdata({...data,ownership: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Self Owned">Self Owned</option>
                 <option value="Rented">Rented</option>
@@ -113,7 +114,7 @@ function BasicInfo(){
             <div className="propertyageSelect">
             <lable htmlFor="propertyage" id="propertyage">Propert Age</lable>
             <div>
-            <select name="propertyage" className="select5" onChange={e=>setdata({...data,property_age: e.target.value})}>
+            <select name="propertyage" className="select5"  onChange={e=>setdata({...data,property_age: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="old">Old</option>
                 <option value="Intermediate">Intermediate</option>
@@ -124,7 +125,7 @@ function BasicInfo(){
             <div className="propertyapprovedSelect">
             <lable htmlFor="propertyapproved" id="propertyapproved">Property Approved</lable>
             <div>
-            <select name="propertyapproved" className="select6" onChange={e=>setdata({...data,property_approved: e.target.value})}>
+            <select name="propertyapproved" className="select6"  onChange={e=>setdata({...data,property_approved: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Property Approved">Property Approved</option>
                 <option value="Property Not Approved">Property Not Approved</option>
@@ -138,13 +139,13 @@ function BasicInfo(){
                 <div>
                     <label htmlFor="Description">Desciption</label>
                 </div>
-                <input className="select7" onChange={e=>setdata({...data,property_description: e.target.value})} ></input>
+                <input className="select7"  onChange={e=>setdata({...data,property_description: e.target.value})} ></input>
             </div>
 
             <div className="BankLoanSelect">
             <lable htmlFor="BankLoan" id="BankLoan">Bank Loan</lable>
             <div>
-            <select name="BankLoan" className="select8" onChange={e=>setdata({...data,bank_loan: e.target.value})}>
+            <select name="BankLoan" className="select8"  onChange={e=>setdata({...data,bank_loan: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option> 
                 <option value="Bank Loan">Bank Loan</option>
                 <option value="No Bank Loan">Bank Laon not Taken</option>

@@ -18,6 +18,7 @@ const Property = () =>{
     const cookies = new Cookies()
     const token = cookies.get('jwt')
     let navigate = useNavigate();
+    // console.log(token);
 
     // const [dataval,setDataval]=useState("")
 
@@ -27,6 +28,7 @@ const Property = () =>{
     },1000);
 
     const onChange=(e)=>{
+        // e.prventDefault();
         const text= e.target.value;
         // setDataval(text);
         // console.log(e.target.elements.searchtext.value);
@@ -66,7 +68,6 @@ const Property = () =>{
                
 
             }).catch(err=>{
-                
                 console.log(err)
             })
        
@@ -98,11 +99,10 @@ const Property = () =>{
                     //         navigate("/login")
                     // }
                 })
+
+            }                
     
-
-            }
-            afterLogin()
-
+                afterLogin()
         },[token, navigate,value])
 
     
