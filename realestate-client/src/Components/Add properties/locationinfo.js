@@ -141,13 +141,13 @@ else if(random_string==="Unsold")
             <div className="email1">
                 <label for="email">Email</label>
                 <div>
-                    <input className="email" placeholder="Email" onChange={e=>setdata({...data,email: e.target.value})}></input>
+                    <input className="email" required={true}  placeholder="Email" onChange={e=>setdata({...data,email: e.target.value})}></input>
                 </div>
             </div>
             <div className="address">
                 <label for="add">Address</label>
                 <div>
-                    <input className="add" placeholder="Address" onChange={e=>setdata({...data,address: e.target.value})}></input>
+                    <input className="add" required={true}  placeholder="Address" onChange={e=>setdata({...data,address: e.target.value})}></input>
                 </div>
             </div>
             </div>
@@ -156,7 +156,7 @@ else if(random_string==="Unsold")
         <div className="city">
             <lable for="city" id="city">City</lable>
             <div>
-            <select name="city" className="select14" onChange={e=>setdata({...data,city: e.target.value})}>
+            <select name="city" required={true}  className="select14" onChange={e=>setdata({...data,city: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Bangalore">Bangalore</option>
                 <option value="mumbai">Mumbai</option>
@@ -170,11 +170,11 @@ else if(random_string==="Unsold")
             <div className="area">
             <lable for="area" id="area">Area</lable>
             <div>
-            <select name="area" className="select15" onChange={e=>setdata({...data,area: e.target.value})}>
+            <select name="area" required={true}  className="select15" onChange={e=>setdata({...data,area: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
-                <option value="pune">Pune</option>
-                <option value="jodhpur">Jodhpur</option>
-                <option value="goa">Goa</option>
+                <option value="pune">Area 1</option>
+                <option value="jodhpur">Area 2</option>
+                <option value="goa">Area 3</option>
             </select>
             </div>
             </div>
@@ -185,7 +185,7 @@ else if(random_string==="Unsold")
         <div className="pincode">
             <lable for="pincode" id="pincode">Pincode</lable>
             <div>
-            <select name="pincode" className="select16" onChange={e=>setdata({...data,pincode: e.target.value})}>
+            <select name="pincode" className="select16" required={true}  onChange={e=>setdata({...data,pincode: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="512468">512468</option>
                 <option value="987456">987456</option>
@@ -196,7 +196,7 @@ else if(random_string==="Unsold")
             <div className="landmark">
                 <label for="land">Landmark</label>
                 <div>
-                    <input className="land" placeholder="Landmark" onChange={e=>setdata({...data,landmark: e.target.value})}></input>
+                    <input className="land" required={true}  placeholder="Landmark" onChange={e=>setdata({...data,landmark: e.target.value})}></input>
                 </div>
         </div>
         </div>
@@ -205,14 +205,14 @@ else if(random_string==="Unsold")
         <div className="lat">
                 <label for="latitude">Latitude</label>
                 <div>
-                    <input className="latitude" placeholder="Latitude" onChange={e=>setdata({...data,latitude: e.target.value})}></input>
+                    <input className="latitude" required={true} type="Number" placeholder="Latitude" onChange={e=>setdata({...data,latitude: e.target.value})}></input>
                 </div>
         </div>
 
         <div className="long">
                 <label for="longitude">Longitude</label>
                 <div>
-                    <input className="longitude" placeholder="Longitude" onChange={e=>setdata({...data,longitude: e.target.value})}></input>
+                    <input className="longitude" required={true} type="Number" placeholder="Longitude" onChange={e=>setdata({...data,longitude: e.target.value})}></input>
                 </div>
         </div>
         </div>

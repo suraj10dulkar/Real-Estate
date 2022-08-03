@@ -68,7 +68,7 @@ function GeneralInfo(){
             <div className="name">
             <lable for="name" id="name">Name</lable>
             <div>
-            <select name="name" className="select9" onChange={e=>setdata({...data,name: e.target.value})}>
+            <select name="name" className="select9" required={true}  onChange={e=>setdata({...data,name: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Owner">Owner</option>
                 <option value="Self">Self</option>
@@ -80,7 +80,7 @@ function GeneralInfo(){
             <div className="mob">
                 <label for="mobile">Mobile</label>
                 <div>
-                    <input className="mobile" placeholder="Enter Mobile Number" minlength="10" maxLength="10" onChange={e=>setdata({...data,mobile: e.target.value})}></input>
+                    <input className="mobile" required={true} placeholder="Enter Mobile Number" minlength="10" maxLength="10" onChange={e=>setdata({...data,mobile: e.target.value})}></input>
                 </div>
             </div>
             </div>
@@ -89,7 +89,7 @@ function GeneralInfo(){
             <div className="postedby">
             <lable for="post" id="post">Posted By</lable>
             <div>
-            <select name="post" className="select10" onChange={e=>setdata({...data,posted_by: e.target.value})}>
+            <select name="post" required={true}  className="select10" onChange={e=>setdata({...data,posted_by: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Self">Self</option>
                 <option value="Family Member">Family Member</option>
@@ -100,7 +100,7 @@ function GeneralInfo(){
             <div className="saletype">
             <lable for="sale" id="sale">Sale Type</lable>
             <div>
-            <select name="sale" className="select11" onChange={e=>setdata({...data,sale_type: e.target.value})}>
+            <select name="sale" className="select11" required={true}  onChange={e=>setdata({...data,sale_type: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -113,7 +113,7 @@ function GeneralInfo(){
             <div className="Featured Package">
             <lable for="pack" id="pack">Featured Packages</lable>
             <div>
-            <select name="pack" className="select12" onChange={e=>setdata({...data,featured_package: e.target.value})}>
+            <select name="pack" className="select12" required={true}  onChange={e=>setdata({...data,featured_package: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -124,7 +124,7 @@ function GeneralInfo(){
             <div className="ppd-Package">
             <lable for="ppd" id="ppd">PPD Packages</lable>
             <div>
-            <select name="ppd" className="select13" onChange={e=>setdata({...data,ppd_package: e.target.value})}>
+            <select name="ppd" className="select13" required={true}  onChange={e=>setdata({...data,ppd_package: e.target.value})}>
                 <option value="" selected={true} disabled>Not selected yet</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -134,16 +134,17 @@ function GeneralInfo(){
             </div>
 
          <div className="container-image">
-            < AiFillCamera className="imageicon"/>
-            <div className="input-file">
-                <Filebase64
+            
+            <AiFillCamera className="imageicon"/>
+            <div  className="input-file">
+            <Filebase64
                         id="fileimage"
                         type="file"
                         multiple={false}
                         onDone={({base64}) => {setdata({ ...data,image: base64 });setName(!name)}}
                         title="Add File"
                         
-                />
+            />
                {name?<div className="addphoto"><span className="image_name" >Add Photo</span></div>:null} 
             </div>
          </div>
