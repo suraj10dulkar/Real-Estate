@@ -11,9 +11,12 @@ import { Cookies } from 'react-cookie';
 import Header from "../header_sidebar/Header";
 import Sidebar from "../header_sidebar/Sidebar";
 import './Property.css'
+import Modal from "../Modals/Modal";
 
 
 const Property = () =>{
+    const [isOpen,setIsOpen] = useState(false);
+    const [isImage,setIsImage]=useState("");
     const [value,setValue]= useState("");
     const [users,setUsers]= useState([]);
     // const [userName_id, setUserName_id] = useState({})
@@ -154,7 +157,11 @@ const Property = () =>{
                 return(
                     <div key={i} className="property_row">
                     <p className="property_column_one">PPD {user._id}</p>
-                    <p className="property_column_two"><FaImages className="image" /></p>
+                    <p className="property_column_two"><FaImages onClick={()=>{setIsOpen(!isOpen);setIsImage(user.image)}} className="image" /></p>
+                    <Modal open={isOpen} onClose={()=>setIsOpen(!isOpen)}>
+                        <img src={isImage} style={{width:"1186px",height:'600px',borderRadius:'20.5px'}} alt="the property"/>
+                        {/* hello */}
+                    </Modal>
                     <p className="property_column_three">{user.property_type}</p>
                     <p className="property_column_four">{user.mobile}</p>
                     <p className="property_column_five">{user.total_area}</p>
